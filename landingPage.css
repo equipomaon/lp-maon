@@ -1,55 +1,89 @@
 :root {
     --primary: #2563eb;
-    --dark: #0f172a;
-    --light-bg: #eff6ff;
-    --white: #ffffff;
+    --dark-overlay: rgba(15, 23, 42, 0.7);
+    --white-glass: rgba(255, 255, 255, 0.1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', sans-serif; color: #4b5563; overflow-x: hidden; }
 
-/* HEADER Y HERO */
-header { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { text-decoration: none; color: var(--dark); font-weight: 600; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh;
+    background-color: #000; /* Fondo de seguridad */
+}
 
-#inicio { display: flex; min-height: 60vh; background: var(--light-bg); }
+/* FONDO GLOBAL CON DIFUMINADO */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); /* Difuminado */
+    z-index: -1;
+    transform: scale(1.1); /* Evita bordes blancos */
+}
+
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; z-index: 1000;
+}
+
+#inicio { display: flex; min-height: 70vh; }
 .hero-container { display: flex; width: 100%; flex-wrap: wrap; }
-.hero-content { flex: 1; padding: 60px 5%; display: flex; flex-direction: column; justify-content: center; }
-.hero-image-space { flex: 1; background: var(--white); }
+.hero-content { 
+    flex: 1; padding: 80px 5%; 
+    background: rgba(15, 23, 42, 0.4); 
+    display: flex; flex-direction: column; justify-content: center; 
+}
+.hero-image-space { flex: 1; background: rgba(255, 255, 255, 0.05); }
 
-.banner-estadistica { background: var(--dark); color: white; padding: 30px; text-align: center; font-weight: bold; }
+.banner-estadistica { 
+    background: var(--dark-overlay); 
+    padding: 30px; text-align: center; font-weight: bold; 
+}
 
 /* CARRUSEL */
-#caracteristicas { padding: 50px 5%; overflow: hidden; }
+#caracteristicas { padding: 80px 5%; text-align: center; }
 .carousel-window { position: relative; max-width: 1100px; margin: 0 auto; display: flex; align-items: center; }
 .carousel-container { overflow: hidden; width: 100%; }
 .carousel-track { display: flex; gap: 20px; transition: 0.5s; }
-.card { min-width: calc(33.33% - 15px); background: #f3f4f6; padding: 30px; border-radius: 10px; text-align: center; }
-.carousel-control { background: var(--primary); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; z-index: 5; }
-.prev { position: absolute; left: -15px; }
-.next { position: absolute; right: -15px; }
+.card { 
+    min-width: calc(33.33% - 15px); 
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    padding: 40px 20px; border-radius: 15px; 
+}
 
-/* --- SECCIÓN CHEVRON MEJORADA (PEGADAS) --- */
+/* --- CORRECCIÓN DE FLECHAS (ESTADÍSTICAS) --- */
 #estadisticas {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
     padding: 100px 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .chevron-container {
-    display: flex;
+    display: flex; /* Asegura que sean horizontales */
+    flex-direction: row; /* Fuerza la dirección horizontal */
     width: 95%;
     max-width: 1200px;
-    /* Eliminamos el gap para que se peguen */
     gap: 0;
 }
 
 .chevron-item {
-    flex: 1;
-    height: 160px;
-    background: rgba(255, 255, 255, 0.1);
+    flex: 1; /* Todas las flechas miden lo mismo */
+    height: 150px;
+    background: var(--white-glass);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -57,54 +91,43 @@ nav a { text-decoration: none; color: var(--dark); font-weight: 600; }
     align-items: center;
     color: white;
     
-    /* Forma de flecha: entrada izquierda y punta derecha */
-    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%, 15% 50%);
-    
-    /* Margen negativo para que la punta de una entre en la otra */
-    margin-left: -4%; 
-    transition: 0.3s ease;
-    cursor: default;
+    /* Punta derecha y entrada izquierda */
+    clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%);
+    margin-left: -3.5%; /* Hace que se peguen */
+    transition: 0.3s;
 }
 
-/* La primera tarjeta: Plana a la izquierda, punta a la derecha */
 .chevron-item:first-child {
     margin-left: 0;
-    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
-}
-
-/* Todas las tarjetas después de la primera tendrán un fondo ligeramente distinto 
-   o borde para que se note la separación física al estar pegadas */
-.chevron-item {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%);
 }
 
 .chevron-item:hover {
     background: rgba(255, 255, 255, 0.2);
-    z-index: 10; /* Se pone al frente al pasar el mouse */
+    transform: scale(1.05);
+    z-index: 10;
 }
 
-/* Contenido dentro de la flecha para que no se corte con el clip-path */
-.chevron-item .content {
-    padding: 0 10%;
-    text-align: center;
+.stat-number { font-size: 2rem; font-weight: 800; display: block; }
+.stat-label { font-size: 0.7rem; text-transform: uppercase; opacity: 0.8; }
+
+/* REGISTRO */
+#registro { padding: 80px 5%; display: flex; justify-content: center; }
+.form-container-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 50px; border-radius: 20px;
+    max-width: 500px; width: 100%; text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.stat-number { font-size: 2.2rem; font-weight: 800; display: block; }
-.stat-label { font-size: 0.8rem; text-transform: uppercase; opacity: 0.8; }
+input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 8px; border: none; background: rgba(255,255,255,0.9); }
+.btn-cta { background: var(--primary); color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; }
 
-/* RESPONSIVE */
+footer { background: rgba(0,0,0,0.8); padding: 30px; text-align: center; }
+
 @media (max-width: 768px) {
-    .chevron-container { flex-direction: column; gap: 10px; padding: 0 20px; }
-    .chevron-item { 
-        margin-left: 0;
-        clip-path: none !important; 
-        border-radius: 10px;
-        height: 120px;
-    }
+    .chevron-container { flex-direction: column; }
+    .chevron-item { margin-left: 0; clip-path: none !important; border-radius: 10px; height: 100px; margin-bottom: 10px; }
+    .card { min-width: 100%; }
 }
-
-/* REGISTRO Y FOOTER */
-#registro { padding: 50px 5%; max-width: 500px; margin: 0 auto; text-align: center; }
-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-input { padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
-footer { background: var(--dark); color: white; padding: 20px; text-align: center; }
