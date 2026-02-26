@@ -3,96 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovación Jurídica | Landing Page</title>
     <link rel="stylesheet" href="landingPage.css">
-    <title>Landing Page | Estructura Base</title>
 </head>
 <body>
 
-    <!-- CABECERA: Logo y Menú -->
     <header>
+        <div class="logo">JuridicaTech</div>
         <nav>
-            <strong>MiProyecto</strong>
             <ul>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#registro">Registrarse</a></li>
+                <li><a href="#caracteristicas">Servicios</a></li>
+                <li><a href="#estadisticas">Proceso</a></li>
+                <li><a href="#registro">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- SECCIÓN HERO: Dividida en dos columnas -->
+        <!-- SECCIÓN HERO: Dividida 50/50 -->
         <section id="inicio">
             <div class="hero-container">
-                <!-- Columna Izquierda: Contenido -->
                 <div class="hero-content">
-                    <h1>Título impactante que resuelve un problema</h1>
-                    <p>Un subtítulo breve que explica cómo funciona tu producto o servicio y por qué es la mejor opción.</p>
-                    <a href="#registro">
-                        <button type="button">Empezar Ahora</button>
-                    </a>
+                    <h1>Innovación Jurídica para un Mundo Conectado</h1>
+                    <p>Protegemos los intereses de empresas y personas en el ámbito digital con asesoramiento legal especializado.</p>
+                    <button class="btn-cta">Empezar Ahora</button>
                 </div>
-                <!-- Columna Derecha: Espacio Blanco -->
                 <div class="hero-image-space"></div>
             </div>
         </section>
 
-        <!-- SECCIÓN CARACTERÍSTICAS: Beneficios -->
+        <!-- SECCIÓN BANNER -->
+        <section class="banner-estadistica">
+            <p>" 78 % de las marcas principales ya automatizan su gestión legal "</p>
+        </section>
+
+        <!-- SECCIÓN CARRUSEL DE BENEFICIOS -->
         <section id="caracteristicas">
-            <h2>¿Por qué elegirnos?</h2>
-            <div class="grid-container">
-                <article>
-                    <h3>Beneficio Principal 1</h3>
-                    <p>Descripción detallada de cómo este beneficio ayuda al usuario.</p>
-                </article>
-
-                <article>
-                    <h3>Beneficio Principal 2</h3>
-                    <p>Enfócate en los resultados, no solo en las funciones técnicas.</p>
-                </article>
-
-                <article>
-                    <h3>Beneficio Principal 3</h3>
-                    <p>Explica qué te diferencia de la competencia de forma clara.</p>
-                </article>
+            <h2>Nuestros Beneficios</h2>
+            <div class="carousel-window">
+                <button class="carousel-control prev" id="prevBtn">&#10094;</button>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="track">
+                        <article class="card">
+                            <h3>Protección Digital</h3>
+                            <p>Seguridad jurídica completa para tus activos digitales.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Automatización</h3>
+                            <p>Reducción de tiempos en procesos legales complejos.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Cumplimiento</h3>
+                            <p>Aseguramos que tu empresa cumpla todas las normativas.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Soporte Global</h3>
+                            <p>Asesoría legal sin fronteras para tus negocios.</p>
+                        </article>
+                    </div>
+                </div>
+                <button class="carousel-control next" id="nextBtn">&#10095;</button>
             </div>
         </section>
 
-        <!-- SECCIÓN TESTIMONIOS: Prueba social -->
-        <section id="testimonios">
-            <h2>Lo que dicen nuestros clientes</h2>
-            <figure>
-                <blockquote>
-                    "Este producto ha mejorado mi productividad en un 200%. No puedo vivir sin él."
-                </blockquote>
-                <figcaption>— Juan Pérez, Emprendedor</figcaption>
-            </figure>
+        <!-- SECCIÓN 6 FLECHAS ESTADÍSTICAS (PEGADAS) -->
+        <section id="estadisticas">
+            <div class="chevron-container">
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">1.000+</span>
+                        <span class="stat-label">Clientes</span>
+                    </div>
+                </div>
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Años</span>
+                    </div>
+                </div>
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Legal</span>
+                    </div>
+                </div>
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Éxitos</span>
+                    </div>
+                </div>
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Países</span>
+                    </div>
+                </div>
+                <div class="chevron-item">
+                    <div class="content">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Soporte</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN DE REGISTRO: Conversión -->
+        <!-- REGISTRO -->
         <section id="registro">
-            <h2>Únete a la comunidad</h2>
-            <p>Completa tus datos para recibir más información.</p>
+            <h2>¿Listo para innovar?</h2>
             <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-
-                <button type="submit">Enviar Registro</button>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <button type="submit" class="btn-cta">Enviar Información</button>
             </form>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>&copy; 2026 MiProyecto. Todos los derechos reservados.</p>
-        <ul>
-            <li><a href="#">Política de Privacidad</a></li>
-            <li><a href="#">Términos de Servicio</a></li>
-        </ul>
+        <p>&copy; 2026 JuridicaTech. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="LandigPage.js"></script>
 </body>
 </html>
