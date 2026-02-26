@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingPage.css">
+    <title>Landing Page | Estructura Base</title>
+</head>
+<body>
+
+    <!-- CABECERA: Logo y Menú -->
+    <header>
+        <nav>
+            <strong>MiProyecto</strong>
+            <ul>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#registro">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO: Dividida en dos columnas -->
+        <section id="inicio">
+            <div class="hero-container">
+                <!-- Columna Izquierda: Contenido -->
+                <div class="hero-content">
+                    <h1>Título impactante que resuelve un problema</h1>
+                    <p>Un subtítulo breve que explica cómo funciona tu producto o servicio y por qué es la mejor opción.</p>
+                    <a href="#registro">
+                        <button type="button">Empezar Ahora</button>
+                    </a>
+                </div>
+                <!-- Columna Derecha: Espacio Blanco -->
+                <div class="hero-image-space"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CARACTERÍSTICAS: Beneficios -->
+        <section id="caracteristicas">
+            <h2>¿Por qué elegirnos?</h2>
+            <div class="grid-container">
+                <article>
+                    <h3>Beneficio Principal 1</h3>
+                    <p>Descripción detallada de cómo este beneficio ayuda al usuario.</p>
+                </article>
+
+                <article>
+                    <h3>Beneficio Principal 2</h3>
+                    <p>Enfócate en los resultados, no solo en las funciones técnicas.</p>
+                </article>
+
+                <article>
+                    <h3>Beneficio Principal 3</h3>
+                    <p>Explica qué te diferencia de la competencia de forma clara.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TESTIMONIOS: Prueba social -->
+        <section id="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <figure>
+                <blockquote>
+                    "Este producto ha mejorado mi productividad en un 200%. No puedo vivir sin él."
+                </blockquote>
+                <figcaption>— Juan Pérez, Emprendedor</figcaption>
+            </figure>
+        </section>
+
+        <!-- SECCIÓN DE REGISTRO: Conversión -->
+        <section id="registro">
+            <h2>Únete a la comunidad</h2>
+            <p>Completa tus datos para recibir más información.</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+
+                <button type="submit">Enviar Registro</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 MiProyecto. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
