@@ -2,41 +2,39 @@
 :root { 
     --primary: #2563eb; 
     --neon-green: #d4ff3f; 
-    --white-glass: rgba(255, 255, 255, 0.1); 
-    --card-bg: rgba(10, 10, 10, 0.9);
+    /* Cambiamos a un cristal más claro y limpio */
+    --white-glass: rgba(255, 255, 255, 0.05); 
+    --border-glass: rgba(255, 255, 255, 0.15);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
     font-family: 'Segoe UI', sans-serif; 
-    background-color: black; 
+    background-color: #050a14; /* Fondo oscuro base para que el texto blanco sea legible */
     color: white; 
     overflow-x: hidden; 
-    /* Importante: relative para que el fondo absolute se pegue aquí */
     position: relative; 
     min-height: 100vh;
 } 
 
-/* ================== 2. CONFIGURACIÓN DEL FONDO (SCROLL NATURAL) ================== */
+/* ================== 2. CONFIGURACIÓN DEL FONDO (MÁS BRILLANTE) ================== */
 body::before { 
     content: ""; 
-    /* CAMBIADO: absolute hace que la imagen se pegue al inicio y suba con el scroll */
     position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; /* Cubre el largo total de la página */
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
     background-image: url('./Assets/op5.jpeg'); 
     background-size: cover; 
     background-position: center top; 
     z-index: -1;  
-    filter: brightness(0.5); 
+    /* SUBIMOS EL BRILLO: 0.9 permite que la imagen se vea casi original pero protegiendo el texto */
+    filter: brightness(0.9); 
     transition: background-image 0.5s ease;
 }
 
-/* ================== 3. ESTILOS DE CABECERA (HEADER) ================== */
+/* ================== 3. ESTILOS DE CABECERA (HEADER TOTALMENTE LIMPIO) ================== */
 header { 
-    backdrop-filter: blur(15px); 
+    backdrop-filter: blur(10px); 
     padding: 1.2rem 5%; 
     display: flex; 
     justify-content: space-between; 
@@ -44,75 +42,119 @@ header {
     position: sticky; 
     top: 0; 
     z-index: 1000; 
-    background: rgba(0,0,0,0.3);
+    background: transparent; /* QUITADO EL FONDO NEGRO */
 }
 .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: white; font-weight: 600; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--neon-green); }
 
-/* ================== 4. SECCIONES HERO ================== */
-.hero-section { width: 100%; min-height: 70vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 100px 0; }
-.hero-content { background: transparent; padding: 40px; max-width: 900px; width: 90%; }
-.hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.7); line-height: 1.1; font-weight: 800; }
-.hero-content p { font-size: clamp(1rem, 4vw, 1.3rem); margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.7); color: #e0e0e0; }
+/* ================== 4. SECCIONES HERO (TOTALMENTE TRANSPARENTE) ================== */
+.hero-section { width: 100%; min-height: 75vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 60px 0; }
+.hero-content { background: transparent; padding: 20px; max-width: 900px; width: 90%; }
+.hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px; text-shadow: 0 4px 20px rgba(0,0,0,0.9); line-height: 1.1; font-weight: 800; }
+.hero-content p { font-size: clamp(1.2rem, 4vw, 1.5rem); margin-bottom: 30px; text-shadow: 0 2px 10px rgba(0,0,0,0.9); font-weight: 500; }
 .btn-cta { background: var(--primary); color: white; padding: 15px 40px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 1rem; }
-.btn-cta:hover { transform: scale(1.05); background: #1d4ed8; box-shadow: 0 0 20px rgba(37, 99, 235, 0.4); }
+.btn-cta:hover { transform: scale(1.05); background: #1d4ed8; box-shadow: 0 0 30px rgba(37, 99, 235, 0.5); }
 
-/* ================== 5. BANNER DE AUTORIDAD ================== */
-.banner-estadistica { padding: 80px 20px; text-align: center; font-weight: bold; width: 100%; font-size: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); }
+/* ================== 5. BANNER DE AUTORIDAD (CRISTAL SUTIL) ================== */
+.banner-estadistica { 
+    padding: 80px 20px; 
+    text-align: center; 
+    font-weight: bold; 
+    width: 100%; 
+    font-size: 1.4rem; 
+    background: rgba(255, 255, 255, 0.03); /* Casi invisible para no tapar el fondo */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid var(--border-glass); 
+    border-bottom: 1px solid var(--border-glass); 
+}
 
-/* ================== 6. CARRUSEL DE BENEFICIOS ================== */
+/* ================== 6. CARRUSEL DE BENEFICIOS (GLASSMORPISM CLARO) ================== */
 #caracteristicas { padding: 100px 0; background: transparent; width: 100%; }
-.carousel-window { max-width: 1300px; margin: 0 auto; overflow: hidden; }
+.carousel-window { max-width: 1300px; margin: 0 auto; overflow: visible; }
 .carousel-track { display: flex !important; justify-content: center; gap: 20px; padding: 20px; }
-.card { flex: 1; max-width: 450px; min-height: 280px; padding: 40px; border-radius: 20px; display: flex; align-items: center; text-align: left; transition: all 0.5s ease; background: var(--card-bg); border: 1px solid #333; transform: scale(0.95); opacity: 0.8; }
-.card.active { transform: scale(1.03); opacity: 1; border-color: var(--neon-green); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.card-content { font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1.2; }
-.stat-highlight { display: block; font-size: 4.5rem; color: var(--neon-green); font-weight: 900; line-height: 1; margin-top: 10px; }
 
-/* ================== 6.1 BOTÓN CTA DEL CARRUSEL ================== */
+.card { 
+    flex: 1; 
+    max-width: 450px; 
+    min-height: 280px; 
+    padding: 40px; 
+    border-radius: 20px; 
+    display: flex; 
+    align-items: center; 
+    text-align: left; 
+    transition: all 0.5s ease; 
+    /* Fondo de cristal blanco muy suave en lugar de negro */
+    background: var(--white-glass); 
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass); 
+    transform: scale(0.95); 
+    opacity: 0.9; 
+}
+
+.card.active { 
+    transform: scale(1.03); 
+    opacity: 1; 
+    border-color: var(--neon-green); 
+    background: rgba(255, 255, 255, 0.1); /* Brilla un poco más al estar activa */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+}
+
+.card-content { font-size: 1.8rem; font-weight: 700; color: #fff; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.stat-highlight { display: block; font-size: 5rem; color: var(--neon-green); font-weight: 900; line-height: 1; margin-top: 10px; }
+
+/* ================== 6.1 BOTÓN CTA NEÓN ================== */
 .cta-container-carrusel { display: flex; justify-content: center; margin-top: 40px; }
-.btn-cta-neon { background-color: var(--neon-green); color: #000; text-decoration: none; font-size: 1.2rem; font-weight: 800; padding: 18px 40px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--neon-green); text-align: center; }
-.btn-cta-neon:hover { background: transparent; color: var(--neon-green); transform: translateY(-3px); }
+.btn-cta-neon { background-color: var(--neon-green); color: #000; text-decoration: none; font-size: 1.3rem; font-weight: 800; padding: 18px 45px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--neon-green); }
+.btn-cta-neon:hover { background: transparent; color: var(--neon-green); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(212, 255, 63, 0.3); }
 
-/* ================== 7. SECCIÓN 6 FLECHAS ================== */
+/* ================== 7. SECCIÓN 6 FLECHAS (TRANSPARENCIA MÁXIMA) ================== */
 #estadisticas { padding: 100px 0; display: flex; justify-content: center; width: 100%; }
 .chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
-.chevron-item { flex: 1; height: 120px; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); margin-left: -3.5%; display: flex; justify-content: center; align-items: center; transition: 0.3s; }
+.chevron-item { 
+    flex: 1; height: 120px; 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(8px); 
+    clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); 
+    margin-left: -3.5%; 
+    display: flex; justify-content: center; align-items: center; 
+    transition: 0.3s;
+    border-left: 1px solid var(--border-glass);
+}
 .chevron-item:first-child { margin-left: 0; clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
-.stat-number { font-size: 1.8rem; font-weight: 800; display: block; text-align: center; }
-.stat-label { font-size: 0.7rem; text-transform: uppercase; opacity: 0.8; }
+.stat-number { font-size: 2rem; font-weight: 800; display: block; text-align: center; color: white; }
+.stat-label { font-size: 0.75rem; text-transform: uppercase; opacity: 0.9; font-weight: 600; }
 
 /* ================== 8. REGISTRO Y FOOTER ================== */
-#registro { padding: 100px 5%; display: flex; justify-content: center; }
-.form-container-glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); padding: 40px; border-radius: 20px; width: 100%; max-width: 500px; border: 1px solid rgba(255,255,255,0.1); }
-input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 8px; border: none; background: rgba(255,255,255,0.9); font-size: 1rem; }
-footer { background: rgba(0,0,0,0.8); padding: 40px; text-align: center; font-size: 0.9rem; color: #888; }
+#registro { padding: 80px 5%; display: flex; justify-content: center; }
+.form-container-glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(25px); 
+    padding: 50px; border-radius: 24px; 
+    width: 100%; max-width: 550px; 
+    border: 1px solid var(--border-glass); 
+}
+input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.95); font-size: 1rem; color: #000; }
+
+footer { 
+    background: transparent; 
+    padding: 60px 20px; 
+    text-align: center; 
+    border-top: 1px solid var(--border-glass);
+}
 
 /* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
-
 @media (max-width: 1024px) { 
-    body::before { 
-        position: absolute; /* Asegurar scroll en tablets */
-        background-image: url('./Assets/op5.jpeg'); 
-        background-position: center center; 
-    }
-    .card { min-width: 100%; max-width: 90%; margin: 0 auto 15px; }
-    .chevron-container { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .chevron-item { min-width: 45%; margin-left: 0; clip-path: none; border-radius: 10px; }
+    body::before { position: absolute; background-image: url('./Assets/op5.jpeg'); background-position: center center; filter: brightness(0.8); }
+    .card { min-width: 100%; max-width: 90%; margin: 0 auto 15px; background: rgba(255,255,255,0.08); }
+    .chevron-item { clip-path: none; margin-left: 0; border-radius: 12px; min-width: 45%; }
 }
 
 @media (max-width: 768px) { 
-    body::before { 
-        position: absolute; /* Asegurar scroll en móviles */
-        background-image: url('./Assets/mob7.jpeg'); 
-        background-position: center center; 
-    }
+    body::before { background-image: url('./Assets/mob7.jpeg'); filter: brightness(0.7); }
     header { flex-direction: column; gap: 15px; }
-    .hero-content h1 { font-size: 2.2rem; }
-    .carousel-track { flex-direction: column; align-items: center; }
-    .stat-highlight { font-size: 3.5rem; }
-    .chevron-item { min-width: 90%; height: 100px; }
-    .btn-cta-neon { width: 100%; font-size: 1.1rem; padding: 15px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .stat-highlight { font-size: 4rem; }
+    .chevron-item { min-width: 90%; margin-bottom: 10px; }
 }
