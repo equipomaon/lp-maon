@@ -1,48 +1,46 @@
-// Selección de elementos del DOM
-const track = document.getElementById('track');
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
+// ================== 1. SELECCIÓN DE ELEMENTOS DEL CARRUSEL ==================
+const cards = document.querySelectorAll('.card');
 
-let index = 0;
-
-// Función para mover el carrusel
-function updatePosition() {
-    // Calculamos el ancho de una carta + el espacio (gap)
-    const cardWidth = track.children[0].offsetWidth + 30; 
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
+// ================== 2. CONFIGURACIÓN DEL ESTADO INICIAL (CENTRO ACTIVO) ==================
+// Al cargar la página, la tarjeta del medio (índice 1) se activa por defecto
+if (cards.length > 1) {
+    cards[1].classList.add('active');
 }
 
-// Evento Botón Siguiente
-nextBtn.addEventListener('click', () => {
-    // Determinamos cuántas cartas se ven (3 en PC, 1 en móvil)
-    const cardsVisible = window.innerWidth > 768 ? 3 : 1;
-    const maxIndex = track.children.length - cardsVisible;
+// ================== 3. LÓGICA DE INTERACCIÓN POR MOVIMIENTO DEL RATÓN (HOVER) ==================
+cards.forEach((card) => {
+    // Evento cuando el ratón entra en una tarjeta
+    card.addEventListener('mouseenter', () => {
+        // Quitamos el brillo a todas las tarjetas
+        cards.forEach(c => c.classList.remove('active'));
+        // Activamos solo la tarjeta donde está el cursor
+        card.classList.add('active');
+    });
 
-    if (index < maxIndex) {
-        index++;
-        updatePosition();
-    } else {
-        // Opcional: Volver al inicio si llega al final
-        index = 0;
-        updatePosition();
-    }
+    // Evento cuando el ratón sale de una tarjeta
+    card.addEventListener('mouseleave', () => {
+        // Llamamos a la función de reseteo para que la del medio vuelva a brillar
+        resetToDefault();
+    });
 });
 
-// Evento Botón Anterior
-prevBtn.addEventListener('click', () => {
-    if (index > 0) {
-        index--;
-        updatePosition();
-    } else {
-        // Opcional: Ir al final si está en el inicio
-        const cardsVisible = window.innerWidth > 768 ? 3 : 1;
-        index = track.children.length - cardsVisible;
-        updatePosition();
-    }
-});
+// ================== 4. FUNCIÓN DE RESETEO AUTOMÁTICO AL CENTRO ==================
+function resetToDefault() {
+    // Usamos un pequeño retraso para verificar si el ratón entró en otra tarjeta
+    setTimeout(() => {
+        const isAnyHovered = Array.from(cards).some(c => c.matches(':hover'));
+        
+        // Si el ratón no está sobre ninguna tarjeta del carrusel, activamos la central
+        if (!isAnyHovered && cards.length > 1) {
+            cards.forEach(c => c.classList.remove('active'));
+            cards[1].classList.add('active');
+        }
+    }, 150); // 150ms de tolerancia para suavidad visual
+}
 
-// Reajustar si el usuario cambia el tamaño de la pantalla
+// ================== 5. AJUSTE DE RESPONSIVIDAD (RESIZE) ==================
 window.addEventListener('resize', () => {
-    index = 0; // Reiniciamos para evitar errores de cálculo
-    updatePosition();
+    // En caso de cambio de pantalla, aseguramos que el estado visual sea el correcto
+    cards.forEach(c => c.classList.remove('active'));
+    if (cards.length > 1) cards[1].classList.add('active');
 });
