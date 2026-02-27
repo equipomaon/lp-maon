@@ -11,40 +11,46 @@ header { backdrop-filter: blur(10px); padding: 1.2rem 5%; display: flex; justify
 .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 600; transition: 0.3s; font-size: 0.9rem; }
-nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO ================== */
+/* ================== 4. SECCIONES HERO (TITULO EN POPPINS REGULAR) ================== */
 .hero-section { width: 100%; min-height: 75vh; display: flex; justify-content: center; align-items: center; text-align: center; padding: 60px 0; }
 .hero-content { background: transparent; padding: 20px; max-width: 900px; width: 90%; }
-.hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); text-shadow: 0 4px 20px rgba(0,0,0,0.9); line-height: 1.1; font-weight: 800; margin-bottom: 20px; }
-.hero-content p { font-size: clamp(1.2rem, 4vw, 1.5rem); text-shadow: 0 2px 10px rgba(0,0,0,0.9); margin-bottom: 30px; font-weight: 400; }
+
+.hero-content h1 { 
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    font-weight: 400; /* CAMBIADO A REGULAR */
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
+    line-height: 1.2; 
+    margin-bottom: 20px;
+    letter-spacing: 0.5px; /* Un poco de respiro para el estilo regular */
+}
+
+.hero-content p { font-size: clamp(1.2rem, 4vw, 1.5rem); text-shadow: 0 2px 10px rgba(0,0,0,0.9); margin-bottom: 30px; font-weight: 300; }
 .btn-cta { background: var(--primary); color: white; padding: 15px 45px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-family: 'Poppins', sans-serif; transition: 0.3s; }
 
 /* ================== 5. BANNER DE AUTORIDAD ================== */
-.banner-estadistica { padding: 80px 20px; text-align: center; font-weight: 700; width: 100%; font-size: 1.4rem; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); }
+.banner-estadistica { padding: 80px 20px; text-align: center; font-weight: 400; width: 100%; font-size: 1.4rem; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); }
 
-/* ================== 6. CARRUSEL DE BENEFICIOS (LILA #b2aaee) ================== */
+/* ================== 6. CARRUSEL DE BENEFICIOS ================== */
 #caracteristicas { padding: 100px 0; background: transparent; width: 100%; }
 .carousel-window { max-width: 1300px; margin: 0 auto; }
 .carousel-track { display: flex !important; justify-content: center; gap: 20px; padding: 20px; }
 .card { flex: 1; max-width: 450px; min-height: 280px; padding: 50px 40px; border-radius: 20px; display: flex; align-items: center; text-align: left; transition: all 0.5s ease; background: var(--white-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); transform: scale(0.95); opacity: 0.9; }
 .card.active { transform: scale(1.03); opacity: 1; border-color: var(--accent-lilac); background: rgba(255, 255, 255, 0.1); }
-.card-content { font-size: 1.8rem; font-weight: 700; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-.stat-highlight { display: block; font-size: 5.5rem; color: var(--accent-lilac); font-weight: 900; line-height: 1; margin-top: 10px; }
-.card.active .stat-highlight { text-shadow: 0 0 20px rgba(178, 170, 238, 0.4); }
+.card-content { font-size: 1.8rem; font-weight: 600; line-height: 1.2; }
+.stat-highlight { display: block; font-size: 5.5rem; color: var(--accent-lilac); font-weight: 800; line-height: 1; margin-top: 10px; }
 
 /* ================== 6.1 BOTÓN CTA DEL CARRUSEL ================== */
 .cta-container-carrusel { display: flex; justify-content: center; margin-top: 40px; }
-.btn-cta-neon { background-color: var(--accent-lilac); color: #000; text-decoration: none; font-size: 1.3rem; font-weight: 800; padding: 18px 45px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--accent-lilac); box-shadow: 0 10px 30px rgba(178, 170, 238, 0.2); font-family: 'Poppins', sans-serif; }
-.btn-cta-neon:hover { background: transparent; color: var(--accent-lilac); transform: translateY(-5px); }
+.btn-cta-neon { background-color: var(--accent-lilac); color: #000; text-decoration: none; font-size: 1.3rem; font-weight: 700; padding: 18px 45px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--accent-lilac); box-shadow: 0 10px 30px rgba(178, 170, 238, 0.2); font-family: 'Poppins', sans-serif; }
 
 /* ================== 7. SECCIÓN 6 FLECHAS ================== */
 #estadisticas { padding: 100px 0; display: flex; justify-content: center; width: 100%; }
 .chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
 .chevron-item { flex: 1; height: 120px; background: rgba(255,255,255,0.05); backdrop-filter: blur(8px); clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); margin-left: -3.5%; display: flex; justify-content: center; align-items: center; transition: 0.3s; border-left: 1px solid var(--border-glass); }
 .chevron-item:first-child { margin-left: 0; clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
-.stat-number { font-size: 2rem; font-weight: 800; display: block; text-align: center; }
-.stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; text-align: center; }
+.stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
+.stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 500; text-align: center; }
 
 /* ================== 8. REGISTRO Y FOOTER ================== */
 #registro { padding: 80px 5%; display: flex; justify-content: center; }
@@ -53,13 +59,7 @@ input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border:
 footer { background: transparent; padding: 60px 20px; text-align: center; border-top: 1px solid var(--border-glass); }
 
 /* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
-@media (max-width: 1024px) { 
-    body::before { position: absolute; background-image: url('./Assets/op5.jpeg'); }
-    .card { min-width: 100%; max-width: 90%; margin: 0 auto 20px; }
-    .chevron-item { clip-path: none; margin-left: 0; border-radius: 12px; min-width: 45%; margin-bottom: 10px; }
-}
 @media (max-width: 768px) { 
-    body::before { background-image: url('./Assets/mob7.jpeg'); }
-    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content h1 { font-size: 2.2rem; font-weight: 400; }
     .stat-highlight { font-size: 4rem; }
 }
