@@ -7,59 +7,21 @@
     --border-glass: rgba(255, 255, 255, 0.15); 
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body { 
-    font-family: 'Poppins', sans-serif; 
-    background-color: #050a14; 
-    color: var(--white-pure); 
-    overflow-x: hidden; 
-    position: relative; 
-    min-height: 100vh; 
-}
+body { font-family: 'Poppins', sans-serif; background-color: #050a14; color: var(--white-pure); overflow-x: hidden; position: relative; min-height: 100vh; }
 
 /* ================== 2. CONFIGURACIÓN DEL FONDO ================== */
-body::before { 
-    content: ""; 
-    position: absolute; 
-    top: 0; left: 0; 
-    width: 100%; height: 100%; 
-    background-image: url('./Assets/op5.jpeg'); 
-    background-size: cover; 
-    background-position: center top; 
-    z-index: -1;  
-    filter: brightness(0.9); 
-    transition: background-image 0.5s ease; 
-}
+body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('./Assets/op5.jpeg'); background-size: cover; background-position: center top; z-index: -1; filter: brightness(0.9); transition: background-image 0.5s ease; }
 
 /* ================== 3. ESTILOS DE CABECERA ================== */
-header { 
-    backdrop-filter: blur(15px); 
-    padding: 1rem 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    background: rgba(0, 0, 0, 0.2); 
-}
+header { backdrop-filter: blur(15px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.2); }
 .logo-btn { display: flex; align-items: center; transition: 0.3s; text-decoration: none; }
-.logo-img { height: 50px; width: auto; object-fit: contain; }
+.logo-img { height: 50px; width: auto; }
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
-.hero-section { 
-    width: 100%; 
-    min-height: 85vh; 
-    display: flex; 
-    align-items: center; 
-    padding: 60px 10%; 
-    background: transparent !important; 
-}
+/* ================== 4. SECCIONES HERO (ZIG-ZAG) ================== */
+.hero-section { width: 100%; min-height: 85vh; display: flex; align-items: center; padding: 60px 10%; background: transparent !important; }
 .hero-content { max-width: 800px; width: 100%; }
 #inicio-1 { justify-content: flex-start; text-align: left; }
 #inicio-2 { justify-content: flex-end; text-align: right; }
@@ -71,11 +33,35 @@ nav a:hover { color: var(--accent-lilac); }
 .resultado-texto { font-size: 1.1rem; font-weight: 300; margin-bottom: 35px !important; }
 .resultado-texto span { color: var(--accent-lilac); font-style: italic; }
 
-.btn-cta { background: var(--primary); color: white; padding: 18px 50px; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; display: inline-block; text-decoration: none; }
-#inicio-2 .btn-cta { margin-left: auto; display: block; width: fit-content; }
+/* ================== 5. ESTILO UNIFICADO DE BOTONES (CÁPSULA LILA) ================== */
+/* Actualizamos .btn-cta para que sea igual a .btn-cta-neon */
+.btn-cta, .btn-cta-neon { 
+    background-color: var(--accent-lilac); 
+    color: #000000; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    padding: 16px 45px; 
+    border-radius: 50px; /* Forma de cápsula */
+    text-transform: uppercase; 
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: 2px solid var(--accent-lilac);
+    box-shadow: 0 10px 30px rgba(178, 170, 238, 0.3);
+    display: inline-block;
+    cursor: pointer;
+}
 
-/* ================== 5. BOTÓN CTA CÁPSULA LILA ================== */
-.btn-cta-neon { background-color: var(--accent-lilac); color: #000000; text-decoration: none; font-size: 1.2rem; font-weight: 700; padding: 16px 45px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--accent-lilac); box-shadow: 0 10px 30px rgba(178, 170, 238, 0.3); display: inline-block; }
+.btn-cta:hover, .btn-cta-neon:hover { 
+    background: transparent; 
+    color: var(--accent-lilac); 
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(178, 170, 238, 0.5); 
+}
+
+/* Alineación de botones según sección */
+#inicio-1 .btn-cta { margin-left: 0; }
+#inicio-2 .btn-cta, #inicio-2 .btn-cta-neon { margin-left: auto; display: block; width: fit-content; }
+.cta-container-centro { display: flex; justify-content: center; margin-top: 40px; }
 
 /* ================== 6. BANNER Y CARRUSEL ================== */
 .banner-estadistica { padding: 80px 20px; text-align: center; font-weight: 300; font-size: 1.4rem; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); }
@@ -85,83 +71,54 @@ nav a:hover { color: var(--accent-lilac); }
 .carousel-track { display: flex !important; justify-content: center; gap: 20px; padding: 20px; }
 .card { flex: 1; max-width: 450px; min-height: 280px; padding: 50px 40px; border-radius: 20px; background: var(--white-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); transform: scale(0.95); opacity: 0.9; cursor: pointer; transition: 0.5s ease; }
 .card.active { transform: scale(1.03); opacity: 1; border-color: var(--accent-lilac); }
+.card-content { font-size: 1.8rem; font-weight: 300; line-height: 1.2; }
 .stat-highlight { display: block; font-size: 5.5rem; color: var(--accent-lilac); font-weight: 800; line-height: 1; margin-top: 10px; text-shadow: 0 0 20px rgba(178, 170, 238, 0.3); }
 
-/* ================== 7. SECCIÓN 6 FLECHAS (PC) ================== */
+/* ================== 7. SECCIÓN 6 FLECHAS ================== */
 #estadisticas { padding: 100px 0; display: flex; justify-content: center; }
 .chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
-.chevron-item { 
-    flex: 1; height: 120px; background: rgba(255,255,255,0.05); backdrop-filter: blur(8px); 
-    clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); 
-    margin-left: -3.5%; display: flex; justify-content: center; align-items: center; transition: 0.3s;
-    border-left: 1px solid var(--border-glass); 
-}
+.chevron-item { flex: 1; height: 120px; background: rgba(255,255,255,0.05); backdrop-filter: blur(8px); clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); margin-left: -3.5%; display: flex; justify-content: center; align-items: center; transition: 0.3s; border-left: 1px solid var(--border-glass); }
 .chevron-item:first-child { margin-left: 0; clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
-.stat-number { font-size: 2rem; font-weight: 700; display: inline-block; margin-right: 5px; }
-.stat-label { font-size: 0.85rem; text-transform: uppercase; font-weight: 300; }
+.stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
+.stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 300; text-align: center; }
 
 /* ================== 8. REGISTRO Y FOOTER ================== */
 #registro { padding: 100px 5%; display: flex; justify-content: center; }
 .form-container-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); padding: 50px; border-radius: 24px; width: 100%; max-width: 600px; text-align: center; border: 1px solid var(--border-glass); }
+.form-container-glass h2 { font-size: 2rem; margin-bottom: 30px; font-weight: 600; }
 form { display: flex; flex-direction: column; gap: 20px; width: 100%; }
 input { width: 100%; padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: 'Poppins', sans-serif; }
-#registro .btn-cta { width: 100%; }
+#registro .btn-cta { width: 100%; } /* El botón de registro ahora también es lila y cápsula */
 
 footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 80px 10% 40px; border-top: 1px solid var(--border-glass); width: 100%; }
 .footer-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; max-width: 1300px; margin: 0 auto; }
 .footer-col { flex: 1; }
-.footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .logo-footer { height: 55px; width: auto; margin-bottom: 15px; }
 
 /* ================== 9. BOTÓN WHATSAPP ================== */
 .whatsapp-btn { position: fixed; bottom: 30px; left: 30px; z-index: 9999; transition: 0.3s; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3)); }
 .whatsapp-icon { width: 65px; height: auto; }
 
-/* ================== 10. ADAPTACIÓN PARA MÓVILES (FULL) ================== */
+/* ================== 10. ADAPTACIÓN PARA MÓVILES ================== */
 @media (max-width: 768px) { 
     body::before { background-image: url('./Assets/mob7.jpeg'); position: absolute; }
     header { flex-direction: column !important; gap: 15px !important; padding: 15px !important; }
     .logo-img { height: 35px !important; }
-
     .hero-section { justify-content: center !important; text-align: center !important; padding: 120px 5% 40px !important; min-height: 50vh !important; }
     .hero-content h1 { font-size: 2.1rem !important; line-height: 1.0 !important; }
-    .hero-content p { font-size: 1.1rem !important; line-height: 1.5 !important; margin-left: 0 !important; text-align: center !important; }
-    .btn-cta { margin: 0 auto !important; display: block !important; width: auto !important; padding: 16px 35px !important; }
+    .hero-content p, .resultado-texto { font-size: 1.1rem !important; line-height: 1.5 !important; margin-left: 0 !important; text-align: center !important; }
+    
+    /* Botón Móvil Unificado */
+    .btn-cta, .btn-cta-neon { margin: 0 auto !important; display: block !important; font-size: 0.95rem !important; padding: 14px 35px !important; width: auto !important; min-width: 220px; border-radius: 50px !important; }
 
-    /* Carrusel Vertical */
     .carousel-track { flex-direction: column !important; transform: none !important; gap: 20px !important; align-items: center !important; }
-    .carousel-container { overflow: visible !important; }
-    .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; padding: 35px 20px !important; text-align: center !important; }
+    .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; padding: 35px 20px !important; }
     .stat-highlight { font-size: 3.5rem !important; }
-    .btn-cta-neon { font-size: 0.9rem !important; padding: 12px 35px !important; width: auto !important; border-radius: 50px !important; }
 
-    /* SECCIÓN 6 FLECHAS -> CONVERTIDA A GRILLA 2x3 */
-    .chevron-container { 
-        display: grid !important; 
-        grid-template-columns: repeat(2, 1fr) !important; /* Grilla de 2 columnas */
-        gap: 15px !important; 
-        padding: 0 5% !important; 
-    }
-    .chevron-item { 
-        width: 100% !important; 
-        margin-left: 0 !important; 
-        height: 110px !important; 
-        clip-path: none !important; /* Eliminamos forma de flecha para que quepa en la grilla */
-        border-radius: 15px !important; 
-        background: rgba(255, 255, 255, 0.08) !important;
-        border: 1px solid var(--border-glass) !important;
-        flex-direction: column !important;
-    }
-    .chevron-item:first-child { clip-path: none !important; border-radius: 15px !important; }
-    .stat-number { font-size: 1.4rem !important; margin-bottom: 5px !important; }
-    .stat-label { font-size: 0.7rem !important; text-align: center; }
-
-    /* Footer y Registro Móvil */
-    .form-container-glass { padding: 40px 20px !important; width: 95% !important; }
     .footer-container { flex-direction: column; text-align: center; gap: 50px; }
     .footer-col:last-child { display: none !important; }
-    .footer-logo { order: -1; }
-    .footer-col { width: 100%; }
+    .chevron-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
+    .chevron-item { width: 100% !important; margin-left: 0 !important; height: 110px !important; clip-path: none !important; border-radius: 15px !important; }
     .whatsapp-btn { bottom: 20px; left: 20px; }
     .whatsapp-icon { width: 50px; }
 }
