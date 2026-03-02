@@ -216,8 +216,46 @@ input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border:
 footer { background: transparent; padding: 60px 20px; text-align: center; border-top: 1px solid var(--border-glass); font-weight: 300; }
 
 /* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
+/* ================== 9. ADAPTACIÓN PARA MÓVILES (CORRECCIÓN NAVBAR) ================== */
 @media (max-width: 768px) { 
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content p { font-size: 1.1rem; font-weight: 300; }
-    .stat-highlight { font-size: 4rem; }
+
+    /* FORZAMOS QUE EL HEADER SEA UNA COLUMNA PARA QUE NADA SE CORTE */
+    header {
+        flex-direction: column !important; /* Logo arriba, menú abajo */
+        align-items: center !important;
+        padding: 15px 5% !important;
+        gap: 15px !important; /* Espacio entre el logo y el menú */
+        height: auto !important; /* Que el alto se ajuste al contenido */
+    }
+
+    /* REDUCIMOS UN POCO EL LOGO */
+    .logo-img {
+        height: 35px !important;
+        width: auto;
+    }
+
+    /* AJUSTAMOS LA LISTA DE ENLACES */
+    nav ul {
+        display: flex !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        gap: 12px !important; /* Espacio entre Servicios, Proceso, Contacto */
+        flex-wrap: wrap; /* Si el teléfono es MUY pequeño, los botones bajan solos */
+    }
+
+    nav a {
+        font-size: 0.8rem !important; /* Letra más pequeña para que quepa todo */
+        white-space: nowrap; /* Evita que una palabra se parta en dos líneas */
+    }
+ 
+    /* REAJUSTE DEL TÍTULO PARA QUE NO QUEDE PEGADO AL NAVBAR */
+    #inicio-1.hero-section {
+        padding-top: 120px !important; /* Espacio extra arriba por el navbar más alto */
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem !important; /* Tamaño ideal para que no se vea gigante */
+        line-height: 1.2;
+    }
 }
