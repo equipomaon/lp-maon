@@ -1,4 +1,6 @@
-/* ================== 1. VARIABLES Y RESETEO GLOBAL ================== */
+/* ================================================================
+   1. VARIABLES DE DISEÑO Y RESETEO GLOBAL
+   ================================================================ */
 :root { 
     --primary: #2563eb; 
     --accent-lilac: #b2aaee; 
@@ -6,18 +8,29 @@
     --white-glass: rgba(255, 255, 255, 0.05); 
     --border-glass: rgba(255, 255, 255, 0.15); 
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body { 
     font-family: 'Poppins', sans-serif; 
     background-color: #050a14; 
-    color: var(--white-pure); 
+    color: var(--white-pure); /* TODO EL TEXTO A BLANCO #FFFFFF */
     overflow-x: hidden; 
     position: relative; 
     min-height: 100vh; 
 }
 
-/* ================== 2. CONFIGURACIÓN DEL FONDO ================== */
+/* ================================================================
+   2. CONFIGURACIÓN DEL FONDO (SCROLL NATURAL)
+   ================================================================ */
 body::before { 
     content: ""; 
     position: absolute; 
@@ -31,7 +44,9 @@ body::before {
     transition: background-image 0.5s ease; 
 }
 
-/* ================== 3. ESTILOS DE CABECERA (HEADER) ================== */
+/* ================================================================
+   3. ESTILOS DE CABECERA (HEADER)
+   ================================================================ */
 header { 
     backdrop-filter: blur(15px); 
     padding: 1rem 5%; 
@@ -48,11 +63,19 @@ header {
 .logo-img { height: 50px; width: auto; object-fit: contain; }
 .logo-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
 
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav a { 
+    text-decoration: none; 
+    color: var(--white-pure); 
+    font-weight: 300; /* Poppins Light */
+    transition: 0.3s; 
+    font-size: 0.95rem; 
+}
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
+/* ================================================================
+   4. SECCIONES HERO (POSICIONAMIENTO Y TEXTOS)
+   ================================================================ */
 .hero-section { 
     width: 100%; 
     min-height: 85vh; 
@@ -62,48 +85,75 @@ nav a:hover { color: var(--accent-lilac); }
     background: transparent !important; 
 }
 
-.hero-content { max-width: 800px; width: 100%; }
+.hero-content { 
+    max-width: 800px; 
+    width: 100%; 
+}
+
+/* Alineación Zig-Zag (PC) */
 #inicio-1 { justify-content: flex-start; text-align: left; }
 #inicio-2 { justify-content: flex-end; text-align: right; }
 
-#inicio-2 .hero-content p { 
-    margin-left: auto; 
-    max-width: 580px;  
-    line-height: 1.8;  
-    letter-spacing: 0.5px; 
-    margin-bottom: 40px;
-}
-
-#inicio-2 .hero-content strong { font-weight: 600; color: var(--accent-lilac); }
-
+/* Tipografías Hero */
 .hero-content h1 { 
     font-size: clamp(2.5rem, 6vw, 4.2rem); 
-    font-weight: 600; 
+    font-weight: 600; /* Poppins SemiBold */
+    color: var(--white-pure);
     text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
     line-height: 1.1; 
     margin-bottom: 25px;
 }
 
+.hero-content p { 
+    font-size: clamp(1.1rem, 3vw, 1.4rem); 
+    font-weight: 300; /* Poppins Light */
+    color: var(--white-pure);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9); 
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+/* Estilos de la Sección 2 (¿Qué hacemos?) */
+#inicio-2 .hero-content p { 
+    margin-left: auto; 
+    max-width: 580px;  
+}
+#inicio-2 .hero-content strong { font-weight: 600; color: var(--accent-lilac); }
+.maon-inline-logo { height: 1.1em; vertical-align: middle; margin: 0 5px; }
+
+/* Botones CTA Generales */
 .btn-cta { 
     background: var(--primary); 
-    color: white; padding: 18px 50px; 
-    border: none; border-radius: 8px; 
-    cursor: pointer; font-weight: 600; 
-    transition: 0.3s; display: inline-block; 
+    color: white; 
+    padding: 18px 50px; 
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    display: inline-block; 
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
 }
-#inicio-2 .btn-cta { margin-left: auto; display: block; width: fit-content; }
+.btn-cta:hover { transform: translateY(-4px) scale(1.03); background: #1d4ed8; box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4); }
+#inicio-2 .btn-cta { margin-left: auto; display: block; }
 
-/* ================== 5. BANNER DE AUTORIDAD ================== */
+/* ================================================================
+   5. BANNER DE AUTORIDAD (DATOS IA)
+   ================================================================ */
 .banner-estadistica { 
     padding: 80px 20px; text-align: center; 
-    font-weight: 300; 
+    font-weight: 300; /* Poppins Light */
     width: 100%; font-size: 1.4rem; 
     background: rgba(255, 255, 255, 0.03); 
     backdrop-filter: blur(5px);
-    border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); 
+    border-top: 1px solid var(--border-glass); 
+    border-bottom: 1px solid var(--border-glass); 
 }
 
-/* ================== 6. CARRUSEL DE BENEFICIOS ================== */
+/* ================================================================
+   6. CARRUSEL DE BENEFICIOS (ESTILO DAPTA LILA)
+   ================================================================ */
 #caracteristicas { padding: 100px 0; background: transparent; width: 100%; }
 .carousel-window { max-width: 1300px; margin: 0 auto; }
 .carousel-track { display: flex !important; justify-content: center; gap: 20px; padding: 20px; }
@@ -112,21 +162,30 @@ nav a:hover { color: var(--accent-lilac); }
     flex: 1; max-width: 450px; min-height: 280px; padding: 50px 40px; border-radius: 20px; 
     display: flex; align-items: center; text-align: left; transition: all 0.5s ease; 
     background: var(--white-glass); backdrop-filter: blur(12px); border: 1px solid var(--border-glass); 
-    transform: scale(0.95); opacity: 0.9; 
+    transform: scale(0.95); opacity: 0.9; cursor: pointer;
 }
-.card.active { transform: scale(1.03); opacity: 1; border-color: var(--accent-lilac); }
-.card-content { font-size: 1.8rem; font-weight: 300; line-height: 1.3; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-.stat-highlight { display: block; font-size: 5.5rem; color: var(--accent-lilac); font-weight: 800; line-height: 1; margin-top: 10px; }
 
-/* ================== 6.1 BOTÓN CTA DEL CARRUSEL ================== */
+.card.active { transform: scale(1.03); opacity: 1; border-color: var(--accent-lilac); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+
+.card-content { font-size: 1.8rem; font-weight: 300; line-height: 1.2; }
+.stat-highlight { 
+    display: block; font-size: 5.5rem; color: var(--accent-lilac); 
+    font-weight: 800; line-height: 1; margin-top: 10px; 
+    text-shadow: 0 0 20px rgba(178, 170, 238, 0.3);
+}
+
+/* Botón Neón del Carrusel */
 .cta-container-carrusel { display: flex; justify-content: center; margin-top: 40px; }
 .btn-cta-neon { 
     background-color: var(--accent-lilac); color: #000; text-decoration: none; 
     font-size: 1.3rem; font-weight: 600; padding: 18px 45px; border-radius: 50px; 
     text-transform: uppercase; transition: 0.3s; border: 2px solid var(--accent-lilac); 
 }
+.btn-cta-neon:hover { background: transparent; color: var(--accent-lilac); transform: translateY(-5px); }
 
-/* ================== 7. SECCIÓN 6 FLECHAS ================== */
+/* ================================================================
+   7. SECCIÓN 6 FLECHAS (CHEVRON PROCESS)
+   ================================================================ */
 #estadisticas { padding: 100px 0; display: flex; justify-content: center; width: 100%; }
 .chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
 .chevron-item { 
@@ -136,111 +195,61 @@ nav a:hover { color: var(--accent-lilac); }
     border-left: 1px solid var(--border-glass); 
 }
 .chevron-item:first-child { margin-left: 0; clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
-.stat-number { font-size: 2rem; font-weight: 700; color: var(--white-pure); display: block; text-align: center; }
+
+.stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
 .stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 300; text-align: center; }
 
-/* ================== 8. REGISTRO Y FOOTER ================== */
+/* ================================================================
+   8. REGISTRO Y FOOTER (TRANSPARENTE)
+   ================================================================ */
 #registro { padding: 80px 5%; display: flex; justify-content: center; }
 .form-container-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); padding: 50px; border-radius: 24px; width: 100%; max-width: 550px; text-align: center; border: 1px solid var(--border-glass); }
-input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border: none; background: rgba(255,255,255,0.95); font-family: 'Poppins', sans-serif; }
+input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border: none; background: rgba(255,255,255,0.95); font-family: 'Poppins', sans-serif; color: #000; }
 footer { background: transparent; padding: 60px 20px; text-align: center; border-top: 1px solid var(--border-glass); font-weight: 300; }
 
-/* ================== 10. BOTÓN FLOTANTE DE WHATSAPP ================== */
+/* ================================================================
+   9. BOTÓN FLOTANTE DE WHATSAPP (INFERIOR IZQUIERDA)
+   ================================================================ */
 .whatsapp-btn {
-    position: fixed;
-    bottom: 30px; /* Distancia del borde inferior */
-    left: 30px;   /* Distancia del borde izquierdo */
-    z-index: 9999; /* Para que siempre esté por encima de todo */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed; bottom: 30px; left: 30px; z-index: 9999;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex; align-items: center; justify-content: center;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3));
 }
+.whatsapp-icon { width: 65px; height: auto; }
+.whatsapp-btn:hover { transform: scale(1.1) rotate(10deg); }
 
-.whatsapp-icon {
-    width: 60px; /* Tamaño para computadoras */
-    height: auto;
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
-}
-
-/* Efecto al pasar el ratón */
-.whatsapp-btn:hover {
-    transform: scale(1.1) rotate(5deg);
-    filter: brightness(1.1);
-}
-
-/* ================== AJUSTES RESPONSIVE PARA EL BOTÓN ================== */
-
-/* Para Tabletas (iPad y similares) */
-@media (max-width: 1024px) {
-    .whatsapp-btn {
-        bottom: 25px;
-        left: 25px;
-    }
-    .whatsapp-icon {
-        width: 55px; /* Un poco más pequeño en tabletas */
-    }
-}
-
-/* Para Teléfonos Celulares */
-@media (max-width: 768px) {
-    .whatsapp-btn {
-        bottom: 20px;
-        left: 20px;
-    }
-    .whatsapp-icon {
-        width: 50px; /* Tamaño ideal para pulgares en móviles */
-    }
-}
-
-/* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
-/* ================== 9. ADAPTACIÓN PARA MÓVILES (CENTRADO TOTAL) ================== */
+/* ================================================================
+   10. ADAPTACIÓN PARA MÓVILES (ESTABILIZADO TOTAL)
+   ================================================================ */
 @media (max-width: 768px) { 
-
-    /* 1. HERO: Forzamos el centrado de los contenedores */
-    .hero-section {
-        padding-top: 80px !important;
-        padding-bottom: 40px !important;
-        min-height: 50vh !important;
-        height: auto !important;
-        display: flex !important;
-        justify-content: center !important; /* Centra el bloque horizontalmente */
-        align-items: center !important;    /* Centra el bloque verticalmente */
-        text-align: center !important;     /* Centra las líneas de texto */
-    }
-
-    .hero-content {
-        max-width: 100% !important;
-        width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra el botón respecto al texto */
-    }
-
-    /* 2. TÍTULO: Centrado de líneas */
-    .hero-content h1 {
-        text-align: center !important; 
-        font-size: 1.8rem !important; 
-        line-height: 1.1 !important;
-        margin-bottom: 25px !important;
-        width: 100%;
-    }
-
-    /* 3. BOTÓN: Centrado automático */
-    .btn-cta {
-        margin: 0 auto !important; /* Asegura que el botón se quede al centro */
-        padding: 14px 30px !important;
-        font-size: 0.95rem !important;
-        display: inline-block !important;
-        width: auto !important;
-    }
-
-    /* Mantener el resto del diseño compacto */
-    header {
-        flex-direction: column !important;
-        padding: 10px !important;
-        gap: 8px !important;
-    }
+    body::before { background-image: url('./Assets/mob7.jpeg'); position: absolute; }
     
-    .logo-img { height: 28px !important; }
+    /* Header Apilado */
+    header { flex-direction: column !important; align-items: center !important; gap: 15px !important; padding: 15px !important; }
+    .logo-img { height: 35px !important; }
+    nav ul { gap: 12px !important; }
+
+    /* Hero Centrado y Compacto */
+    .hero-section { justify-content: center !important; text-align: center !important; padding: 120px 5% 40px !important; min-height: 50vh !important; }
+    .hero-content h1 { font-size: 2.1rem !important; line-height: 1.0 !important; }
+    .hero-content p { font-size: 1.1rem !important; line-height: 1.5 !important; }
+    .btn-cta { margin: 0 auto !important; display: block !important; padding: 16px 35px !important; }
+
+    /* Carrusel Vertical Forzado */
+    .carousel-track { flex-direction: column !important; transform: none !important; gap: 20px !important; align-items: center !important; }
+    .carousel-container { overflow: visible !important; }
+    .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; filter: none !important; padding: 35px 20px !important; text-align: center !important; }
+    .stat-highlight { font-size: 3.5rem !important; text-align: center !important; }
+    .card-content { font-size: 1.2rem !important; text-align: center !important; }
+
+    /* Botón CTA Cápsula */
+    .cta-container-carrusel { margin-top: 30px !important; }
+    .btn-cta-neon { font-size: 0.9rem !important; padding: 12px 35px !important; width: auto !important; border-radius: 50px !important; }
+
+    /* Proceso y WhatsApp */
+    .chevron-container { flex-direction: column; gap: 10px; }
+    .chevron-item { margin-left: 0; clip-path: none !important; border-radius: 10px; height: 100px; }
+    .whatsapp-btn { bottom: 20px; left: 20px; }
+    .whatsapp-icon { width: 50px; }
 }
