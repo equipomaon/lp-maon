@@ -194,73 +194,68 @@ footer { background: transparent; padding: 60px 20px; text-align: center; border
 }
 
 /* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
+/* ================== 9. ADAPTACIÓN PARA MÓVILES (OPTIMIZADA) ================== */
 @media (max-width: 768px) { 
 
-    /* CORRECCIÓN DEL NAVBAR MÓVIL */
+    /* 1. HEADER: Más compacto para ganar espacio visual */
     header {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 15px !important;
-        padding: 15px 5% !important;
-        height: auto !important;
+        gap: 8px !important; /* Reducimos el espacio entre logo y menú */
+        padding: 10px 5% !important;
+        background: rgba(0, 0, 0, 0.5) !important;
     }
-    .logo-img { height: 35px !important; }
-    nav ul { gap: 12px !important; justify-content: center !important; }
-    nav a { font-size: 0.8rem !important; }
 
-    /* AJUSTE HERO POR NAVBAR MÁS ALTO */
+    .logo-img { height: 30px !important; } /* Logo ligeramente más pequeño */
+    nav ul { gap: 10px !important; }
+    nav a { font-size: 0.75rem !important; }
+
+    /* 2. HERO: Subimos el contenido y ajustamos el aire */
     .hero-section {
-        padding-top: 130px !important; 
+        padding-top: 90px !important; /* Menos espacio arriba: el texto sube */
+        padding-bottom: 40px !important;
+        min-height: 70vh !important; /* Reducimos la altura mínima para que no sobre tanto espacio */
         justify-content: center !important;
         text-align: center !important;
     }
-    .hero-content { max-width: 100% !important; }
-    .hero-content h1 { font-size: 2.1rem !important; }
-    .btn-cta { margin: 0 auto !important; display: block !important; }
 
-    /* CARRUSEL VERTICAL */
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* 3. TÍTULO: Más apretado y legible */
+    .hero-content h1 {
+        font-size: 1.9rem !important; /* Un poco más pequeño para evitar saltos raros */
+        line-height: 1.1 !important; /* Líneas más juntas */
+        margin-bottom: 20px !important; /* Menos espacio antes del botón */
+        font-weight: 600;
+    }
+
+    /* 4. BOTÓN: Ajuste proporcional */
+    .btn-cta {
+        padding: 14px 30px !important;
+        font-size: 0.95rem !important;
+        width: auto !important; /* Que no ocupe todo el ancho si no es necesario */
+        min-width: 200px;
+        margin: 0 auto !important;
+    }
+
+    /* 5. CARRUSEL VERTICAL: Sin espacios muertos */
     .carousel-track {
-        flex-direction: column !important; 
-        transform: none !important; 
-        gap: 30px !important; 
-        align-items: center !important;
-        padding: 0 !important;
+        flex-direction: column !important;
+        gap: 20px !important;
     }
-    .carousel-container { overflow: visible !important; }
-    .carousel-window { padding: 0 !important; max-width: 100% !important; }
-
     .card {
-        min-width: 100% !important; 
-        max-width: 90% !important; 
-        min-height: auto !important; 
-        padding: 40px 25px !important;
-        opacity: 1 !important; 
-        transform: scale(1) !important; 
-        filter: none !important; 
-        border: 1px solid var(--border-glass) !important;
+        padding: 30px 20px !important;
+        min-height: auto !important;
     }
+    .stat-highlight { font-size: 3.2rem !important; }
 
-    .stat-highlight { font-size: 3.5rem !important; margin-top: 10px; }
-    .card-content { font-size: 1.2rem !important; text-align: center; }
-
-    /* BOTÓN CTA CÁPSULA PEQUEÑA */
-    .cta-container-carrusel {
-        margin-top: 40px !important;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    /* 6. BOTÓN WHATSAPP MÓVIL */
+    .whatsapp-btn {
+        bottom: 15px !important;
+        left: 15px !important;
     }
-    .btn-cta-neon {
-        font-size: 0.9rem !important;
-        padding: 12px 35px !important;
-        width: auto !important;
-        max-width: 80% !important;
-        border-radius: 50px !important;
-        text-align: center;
-        display: inline-block !important;
-    }
-
-    /* CHEVRON MÓVIL */
-    .chevron-container { flex-direction: column; gap: 10px; }
-    .chevron-item { margin-left: 0; clip-path: none !important; border-radius: 10px; height: 100px; }
+    .whatsapp-icon { width: 45px !important; }
 }
