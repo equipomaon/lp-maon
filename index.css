@@ -247,7 +247,31 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     /* Carrusel Vertical */
     .carousel-track { flex-direction: column !important; transform: none !important; gap: 20px !important; align-items: center !important; }
     .carousel-container { overflow: visible !important; }
-    .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; padding: 35px 20px !important; }
+     .card { 
+        min-width: 100% !important; 
+        max-width: 100% !important; 
+        /* BAJAMOS LA ALTURA MÍNIMA: de 250px a 160px para que no sobre espacio abajo */
+        min-height: 160px !important; 
+        opacity: 1 !important; 
+        transform: scale(1) !important; 
+        filter: none !important;
+        /* AJUSTAMOS EL PADDING: 20px arriba/abajo y 20px a los lados */
+        padding: 20px !important; 
+        display: flex !important; 
+        flex-direction: column !important; 
+        justify-content: center !important;
+    }
+
+    /* SUBIMOS EL NÚMERO: Para que esté pegado al texto */
+    .card-content { 
+        font-size: 1rem !important; 
+        margin-bottom: 0 !important; /* Quitamos margen inferior del texto */
+    }
+
+    .stat-highlight { 
+        font-size: 3rem !important; /* Reducimos un poco el tamaño del número */
+        margin-top: 2px !important;  /* Casi pegado al texto de arriba */
+    }
     .stat-highlight { font-size: 3.5rem !important; }
 
     /* Proceso Grilla 2x3 */
