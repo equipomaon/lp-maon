@@ -95,14 +95,22 @@
             </div>
         </section>
 
+       <!-- ================== 7. SECCIÓN DE CONTACTO (REGISTRO) ================== -->
         <section id="registro">
             <div class="form-container-glass">
                 <h2>¿Listo para la transformación?</h2>
-                <form>
-                    <input type="text" placeholder="Nombre completo" required>
-                    <input type="email" placeholder="Correo electrónico corporativo" required>
+                
+                <!-- COLOQUÉ AQUÍ TU LINK DE FORMSPREE -->
+                <form action="https://formspree.io/f/xdalrowr" method="POST">
+                    
+                    <!-- ES VITAL AGREGAR EL ATRIBUTO "name" PARA QUE LLEGUE EL DATO -->
+                    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+                    
+                    <input type="email" name="Email" placeholder="Correo electrónico corporativo" required>
+                    
                     <button type="submit" class="btn-cta">Enviar Información</button>
                 </form>
+
             </div>
         </section>
     </main>
@@ -125,15 +133,7 @@
             </div>
 
             <!-- Columna 3: Navegación Rápida -->
-            <div class="footer-col">
-                <h3>Navegación</h3>
-                <ul>
-                    <li><a href="#caracteristicas">Servicios</a></li>
-                    <li><a href="#inicio-2">¿Qué hacemos?</a></li>
-                    <li><a href="#estadisticas">Proceso</a></li>
-                    <li><a href="#registro">Contacto</a></li>
-                </ul>
-            </div>
+            
         </div>
     </footer>
 
