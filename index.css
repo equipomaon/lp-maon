@@ -19,7 +19,7 @@ body {
     min-height: 100vh; 
 }
 
-/* ================== 2. CONFIGURACIÓN DEL FONDO ================== */
+/* ================== 2. CONFIGURACIÓN DEL FONDO (SCROLL NATURAL) ================== */
 body::before { 
     content: ""; 
     position: absolute; 
@@ -33,7 +33,7 @@ body::before {
     transition: background-image 0.5s ease; 
 }
 
-/* ================== 3. ESTILOS DE CABECERA ================== */
+/* ================== 3. ESTILOS DE CABECERA (OPACIDAD 0.6) ================== */
 header { 
     backdrop-filter: blur(15px); 
     padding: 1rem 5%; 
@@ -43,15 +43,17 @@ header {
     position: sticky; 
     top: 0; 
     z-index: 1000; 
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6); /* Opacidad aumentada a petición */
 }
 .logo-btn { display: flex; align-items: center; transition: 0.3s; text-decoration: none; }
 .logo-img { height: 50px; width: auto; object-fit: contain; }
+.logo-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
+/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL ZIG-ZAG) ================== */
 .hero-section { 
     width: 100%; 
     min-height: 85vh; 
@@ -71,7 +73,7 @@ nav a:hover { color: var(--accent-lilac); }
 .resultado-texto { font-size: 1.1rem; font-weight: 300; margin-bottom: 35px !important; }
 .resultado-texto span { color: var(--accent-lilac); font-style: italic; }
 
-/* ================== 5. ESTILO UNIFICADO DE BOTONES ================== */
+/* ================== 5. ESTILO UNIFICADO DE BOTONES (CÁPSULA LILA) ================== */
 .btn-cta, .btn-cta-neon { 
     background-color: var(--accent-lilac); 
     color: #000000; 
@@ -105,6 +107,8 @@ nav a:hover { color: var(--accent-lilac); }
 .card.active { transform: scale(1.03); opacity: 1; border-color: var(--accent-lilac); }
 .stat-highlight { display: block; font-size: 5.5rem; color: var(--accent-lilac); font-weight: 800; line-height: 1; margin-top: 10px; text-shadow: 0 0 20px rgba(178, 170, 238, 0.3); }
 
+.cta-container-centro { display: flex; justify-content: center; margin-top: 40px; }
+
 /* ================== 7. SECCIÓN 6 FLECHAS ================== */
 #estadisticas { padding: 100px 0; display: flex; justify-content: center; width: 100%; }
 .chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
@@ -113,60 +117,97 @@ nav a:hover { color: var(--accent-lilac); }
 .stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
 .stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 300; text-align: center; }
 
-/* ================== 8. REGISTRO Y FOOTER ================== */
+/* ================== 8. FORMULARIO DE REGISTRO (CRISTAL) ================== */
 #registro { padding: 100px 5%; display: flex; justify-content: center; }
-.form-container-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); padding: 50px; border-radius: 24px; width: 100%; max-width: 600px; text-align: center; border: 1px solid var(--border-glass); }
-input { width: 100%; padding: 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-family: 'Poppins', sans-serif; }
+.form-container-glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(25px); 
+    padding: 60px 40px; 
+    border-radius: 24px; 
+    width: 100%; 
+    max-width: 600px; 
+    text-align: center; 
+    border: 1px solid var(--border-glass); 
+}
+.form-container-glass h2 { font-size: 2rem; margin-bottom: 30px; font-weight: 600; }
+
+form { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+
+input { 
+    width: 100%; padding: 18px; border-radius: 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    background: rgba(255, 255, 255, 0.05); 
+    color: white; font-family: 'Poppins', sans-serif; font-size: 1rem; 
+}
+input:focus { border-color: var(--accent-lilac); outline: none; background: rgba(255, 255, 255, 0.1); }
 #registro .btn-cta { width: 100%; }
 
-footer { 
-    background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(15px);
-    padding: 80px 10% 40px; 
-    border-top: 1px solid var(--border-glass); 
-    width: 100%;
-}
+/* ================== 9. ESTILOS DEL FOOTER (TAMAÑOS ADECUADOS) ================== */
+footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 80px 10% 40px; border-top: 1px solid var(--border-glass); width: 100%; }
 .footer-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; max-width: 1300px; margin: 0 auto; }
 .footer-col { flex: 1; }
 .footer-col h3 { color: var(--accent-lilac); font-size: 1.1rem; font-weight: 600; margin-bottom: 25px; text-transform: uppercase; }
-.footer-col p, .footer-col a { color: var(--white-pure); font-weight: 300; font-size: 0.9rem; text-decoration: none; line-height: 2; }
-.footer-col a:hover { color: var(--accent-lilac); }
+
+/* Iconos integrados en enlaces */
+.footer-link-item {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: white; margin-bottom: 15px; transition: 0.3s;
+    font-size: 0.9rem; font-weight: 300;
+}
+.footer-link-item:hover { color: var(--accent-lilac); }
+
+.icon-small { width: 22px; height: 22px; object-fit: contain; }
+
+/* Grid de iconos sociales */
+.social-grid { display: flex; gap: 15px; margin-top: 25px; }
+.social-grid img { width: 26px; height: 26px; object-fit: contain; transition: 0.3s; }
+.social-grid a:hover img { transform: translateY(-3px); filter: brightness(1.2); }
+
 .footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
-.logo-footer { height: 60px; width: auto; margin-bottom: 15px; } /* Corregido de 300px a 60px */
+.logo-footer { height: 50px; width: auto; margin-bottom: 15px; }
 .footer-bottom { text-align: center; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 0.75rem; opacity: 0.5; }
 
-/* ================== 9. BOTÓN WHATSAPP ================== */
-.whatsapp-btn { position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: 0.3s; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3)); }
+/* ================== 10. BOTÓN WHATSAPP (DERECHA) ================== */
+.whatsapp-btn { 
+    position: fixed; bottom: 30px; right: 30px; z-index: 9999; 
+    transition: 0.3s; display: flex; align-items: center; justify-content: center; 
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3)); 
+}
 .whatsapp-icon { width: 65px; height: auto; }
 
-/* ================== 10. ADAPTACIÓN PARA MÓVILES (FULL) ================== */
+/* ================== 11. ADAPTACIÓN PARA MÓVILES (FULL OPTIMIZADO) ================== */
 @media (max-width: 768px) { 
     body::before { background-image: url('./Assets/mob7.jpeg'); position: absolute; }
-    
     header { flex-direction: column !important; align-items: center !important; gap: 15px !important; padding: 15px !important; }
     .logo-img { height: 35px !important; }
-    nav ul { gap: 12px !important; }
 
     .hero-section { justify-content: center !important; text-align: center !important; padding: 120px 5% 40px !important; min-height: 50vh !important; }
     .hero-content h1 { font-size: 2.1rem !important; line-height: 1.0 !important; }
     .hero-content p, .resultado-texto { font-size: 1.1rem !important; line-height: 1.5 !important; margin-left: 0 !important; text-align: center !important; }
+    
     .btn-cta, .btn-cta-neon { margin: 0 auto !important; display: block !important; font-size: 0.95rem !important; padding: 14px 35px !important; width: auto !important; min-width: 220px; border-radius: 50px !important; }
 
+    /* Carrusel Vertical */
     .carousel-track { flex-direction: column !important; transform: none !important; gap: 20px !important; align-items: center !important; }
     .carousel-container { overflow: visible !important; }
     .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; padding: 35px 20px !important; }
     .stat-highlight { font-size: 3.5rem !important; }
 
-    /* FOOTER MÓVIL: Información primero, Logo al final */
-    .footer-container { flex-direction: column; text-align: center; gap: 50px; }
-    .footer-logo { order: 2; } /* El logo baja después de la información */
-    .footer-col:last-child { display: none !important; } /* Ocultar Navegación */
-    .footer-col { width: 100%; }
-    .logo-footer { height: 200px; }
-
+    /* Proceso Grilla 2x3 */
     .chevron-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
     .chevron-item { width: 100% !important; margin-left: 0 !important; height: 110px !important; clip-path: none !important; border-radius: 15px !important; }
-    
+
+    /* Formulario Móvil */
+    .form-container-glass { padding: 40px 20px !important; width: 95% !important; }
+
+    /* Footer Móvil */
+    .footer-container { flex-direction: column; text-align: center; gap: 50px; }
+    .contact-links, .social-grid { justify-content: center; }
+    .footer-link-item { justify-content: center; }
+    .footer-col:last-child { display: none !important; }
+    .footer-logo { order: 2; }
+    .logo-footer { height: 100px; }
+
     .whatsapp-btn { bottom: 20px; right: 20px; left: auto; }
     .whatsapp-icon { width: 50px; }
 }
