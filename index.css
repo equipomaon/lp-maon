@@ -49,41 +49,57 @@ nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; trans
 nav a:hover { color: var(--accent-lilac); }
 
 /* ================== 4. SECCIONES HERO (SUBTÍTULOS EN LIGHT 300) ================== */
-/* ================== 4. SECCIONES HERO (ALINEADO A LA IZQUIERDA) ================== */
+
+/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
 .hero-section { 
     width: 100%; 
     min-height: 80vh; 
     display: flex; 
-    /* Cambiamos el centrado por alineación al inicio (izquierda) */
-    justify-content: flex-start; 
     align-items: center; 
-    text-align: left; /* Todo el texto a la izquierda */
-    padding: 60px 8%; /* Añadimos un poco más de aire a los lados */
+    padding: 60px 8%; 
+    background: transparent !important; 
 }
 
+/* General: Texto a la izquierda */
 .hero-content { 
-    background: transparent; 
-    /* Limitamos el ancho para que el texto no se monte sobre la figura de la derecha */
     max-width: 700px; 
     width: 100%;
 }
 
+/* SECCIÓN 1 (#inicio-1): Se mantiene a la izquierda */
+#inicio-1 {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* SECCIÓN 2 (#inicio-2): MOVER A LA DERECHA */
+#inicio-2 {
+    justify-content: flex-end; /* Empuja el contenido al final (derecha) */
+    text-align: right;         /* Alinea las líneas de texto a la derecha */
+}
+
+/* Ajuste específico para el botón en la sección derecha */
+#inicio-2 .btn-cta {
+    margin-left: auto; /* Asegura que el botón se pegue a la derecha */
+}
+
+/* Estilos de fuente (Se mantienen Poppins y blanco) */
 .hero-content h1 { 
     font-size: clamp(2.5rem, 6vw, 4.2rem); 
-    font-weight: 600; /* SemiBold */
+    font-weight: 600; 
+    color: #ffffff;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
     line-height: 1.1; 
     margin-bottom: 25px;
-    letter-spacing: -1px;
 }
 
 .hero-content p { 
     font-size: clamp(1.1rem, 3vw, 1.4rem); 
-    font-weight: 300; /* Poppins Light */
+    font-weight: 300; 
+    color: #ffffff;
     text-shadow: 0 2px 10px rgba(0,0,0,0.9); 
     margin-bottom: 35px;
     line-height: 1.6;
-    max-width: 600px; /* Párrafo un poco más corto para mejor lectura */
 }
 
 .btn-cta { 
@@ -94,27 +110,23 @@ nav a:hover { color: var(--accent-lilac); }
     border-radius: 8px; 
     cursor: pointer; 
     font-weight: 600; 
-    font-size: 1.1rem;
-    font-family: 'Poppins', sans-serif; 
     transition: 0.3s;
-    /* Asegura que el botón no se estire si está en un flex container */
-    display: inline-block; 
+    display: block; /* Cambiado a block para manejar márgenes automáticos */
+    width: fit-content;
 }
 
-.btn-cta:hover { 
-    transform: scale(1.05); 
-    background: #1d4ed8;  
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4); 
-}
+.btn-cta:hover { transform: scale(1.05); background: #1d4ed8; }
 
-/* Ajuste móvil para mantener coherencia */
+/* REGLAS RESPONSIVE (En móviles todo vuelve al centro) */
 @media (max-width: 768px) { 
     .hero-section {
-        justify-content: center;
-        text-align: center;
+        justify-content: center !important;
+        text-align: center !important;
         padding: 40px 5%;
     }
-    .hero-content h1 { font-size: 2.5rem; }
+    #inicio-2 .btn-cta {
+        margin: 0 auto;
+    }
 }
 
 /* ================== 5. BANNER DE AUTORIDAD ================== */
