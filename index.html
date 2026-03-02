@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAON | Automatización</title>
     <link rel="icon" href="./Assets/maon_letra_logo.png" type="image/png">
+    <!-- IMPORTACIÓN DE FUENTE POPPINS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -19,7 +20,7 @@
             <ul>
                 <li><a href="#caracteristicas">Servicios</a></li>
                 <li><a href="#inicio-2">¿Qué hacemos?</a></li>
-                <li><a href="#estadisticas">Como lo hacemos</a></li>
+                <li><a href="#como-lo-hacemos">¿Cómo lo hacemos?</a></li>
                 <li><a href="#registro">Contacto</a></li>
             </ul>
         </nav>
@@ -75,7 +76,6 @@
                     <p class="resultado-texto">
                         El resultado: <span>Menos carga operativa, respuestas inmediatas y más clientes comprando o agendando, incluso cuando no estás conectado.</span>
                     </p>
-                    <!-- NUEVO BOTÓN ESTILO CÁPSULA LILA -->
                     <div class="cta-container-derecha">
                         <a href="#registro" class="btn-cta-neon">Quiero automatizar mi negocio</a>
                     </div>
@@ -83,46 +83,41 @@
             </div>
         </section>
 
-        <!-- ... (Resto de secciones: 6. Proceso, 7. Registro, 8. Footer) ... -->
-        <!-- ================== 6. SECCIÓN DE PROCESO (COMO LO HACEMOS) ================== -->
-        <section id="estadisticas">
+        <!-- ================== 6. SECCIÓN DE PROCESO (¿CÓMO LO HACEMOS?) ================== -->
+        <section id="como-lo-hacemos" class="process-section">
+            <h1 class="section-title">¿Cómo lo hacemos?</h1>
+            
             <div class="chevron-container">
-                <!-- Paso 1 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Atraemos</span>
                         <span class="step-desc">Llevamos tu marca a personas con interés real.</span>
                     </div>
                 </div>
-                <!-- Paso 2 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Filtramos</span>
                         <span class="step-desc">Nuestra IA califica y segmenta prospectos ideales.</span>
                     </div>
                 </div>
-                <!-- Paso 3 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Seguimiento</span>
                         <span class="step-desc">Acompañamos al prospecto hasta la decisión.</span>
                     </div>
                 </div>
-                <!-- Paso 4 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Conversión</span>
                         <span class="step-desc">Se realiza la compra o agendamiento en agenda.</span>
                     </div>
                 </div>
-                <!-- Paso 5 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Base de datos</span>
                         <span class="step-desc">Leads organizados para futuras acciones.</span>
                     </div>
                 </div>
-                <!-- Paso 6 -->
                 <div class="chevron-item">
                     <div class="content">
                         <span class="step-title">Re-impacto</span>
@@ -130,37 +125,30 @@
                     </div>
                 </div>
             </div>
+
+            <div class="cta-container-centro">
+                <a href="#registro" class="btn-cta-neon">Activa tu sistema de ventas</a>
+            </div>
         </section>
 
-       <!-- ================== 7. SECCIÓN DE CONTACTO (REGISTRO) ================== -->
+        <!-- ================== 7. SECCIÓN DE CONTACTO (REGISTRO) ================== -->
         <section id="registro">
             <div class="form-container-glass">
                 <h2>¿Listo para la transformación?</h2>
-                
-                <!-- COLOQUÉ AQUÍ TU LINK DE FORMSPREE -->
                 <form action="https://formspree.io/f/xdalrowr" method="POST">
-                    
-                    <!-- ES VITAL AGREGAR EL ATRIBUTO "name" PARA QUE LLEGUE EL DATO -->
                     <input type="text" name="Nombre" placeholder="Nombre completo" required>
-                    
                     <input type="email" name="Email" placeholder="Correo electrónico corporativo" required>
-                    
                     <button type="submit" class="btn-cta">Enviar Información</button>
                 </form>
-
             </div>
         </section>
     </main>
 
-  
-    <!-- ================== 8. PIE DE PÁGINA (FOOTER) ================== -->
+    <!-- ================== 8. PIE DE PÁGINA ================== -->
     <footer>
         <div class="footer-container">
-            <!-- Columna 1: Contacto y Redes -->
             <div class="footer-col">
                 <h3>Contacto</h3>
-                
-                <!-- Enlaces de contacto directo con icono al lado -->
                 <div class="contact-links">
                     <a href="https://wa.me/573504032222" target="_blank" class="footer-link-item">
                         <img src="./Assets/logo-whatsapp.png" alt="WhatsApp" class="icon-small">
@@ -170,23 +158,25 @@
                         <img src="./Assets/logo-correo.png" alt="Gmail" class="icon-small">
                         <span>equipomaon@gmail.com</span>
                     </a>
-                    
-                     <a href="mailto:equipomaon@gmail.com" target="_blank" class="footer-link-item">
-                        <img src="./Assets/logo_linkedin.png" alt="Gmail" class="icon-small">
+                    <a href="https://www.linkedin.com/company/maoncrm" target="_blank" class="footer-link-item">
+                        <img src="./Assets/logo_linkedin.png" alt="LinkedIn" class="icon-small">
                         <span>Maon Automatizaciones</span>
                     </a>
                 </div>
-                
-              
             </div>
-
-            <!-- Columna 2: Logo Central -->
             <div class="footer-col footer-logo">
                 <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-footer">
-                <p class="copyright-text">© 2026 MAON. <br> Inteligencia en cada mensaje.</p>
+                <p class="copyright-text">© 2026 MAON. Inteligencia en cada mensaje.</p>
             </div>
-
-           
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul class="footer-links">
+                    <li><a href="#caracteristicas">Servicios</a></li>
+                    <li><a href="#inicio-2">¿Qué hacemos?</a></li>
+                    <li><a href="#como-lo-hacemos">Proceso</a></li>
+                    <li><a href="#registro">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
@@ -195,6 +185,5 @@
     <a href="https://wa.me/573504032222" class="whatsapp-btn" target="_blank">
         <img src="./Assets/logo-whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
-
 </body>
 </html>
