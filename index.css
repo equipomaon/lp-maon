@@ -7,21 +7,59 @@
     --border-glass: rgba(255, 255, 255, 0.15); 
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Poppins', sans-serif; background-color: #050a14; color: var(--white-pure); overflow-x: hidden; position: relative; min-height: 100vh; }
+
+html { scroll-behavior: smooth; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #050a14; 
+    color: var(--white-pure); 
+    overflow-x: hidden; 
+    position: relative; 
+    min-height: 100vh; 
+}
 
 /* ================== 2. CONFIGURACIÓN DEL FONDO ================== */
-body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('./Assets/op5.jpeg'); background-size: cover; background-position: center top; z-index: -1; filter: brightness(0.9); transition: background-image 0.5s ease; }
+body::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-image: url('./Assets/op5.jpeg'); 
+    background-size: cover; 
+    background-position: center top; 
+    z-index: -1;  
+    filter: brightness(0.9); 
+    transition: background-image 0.5s ease; 
+}
 
 /* ================== 3. ESTILOS DE CABECERA ================== */
-header { backdrop-filter: blur(15px); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; background: rgba(0, 0, 0, 0.2); }
+header { 
+    backdrop-filter: blur(15px); 
+    padding: 1rem 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    background: rgba(0, 0, 0, 0.2); 
+}
 .logo-btn { display: flex; align-items: center; transition: 0.3s; text-decoration: none; }
-.logo-img { height: 50px; width: auto; }
+.logo-img { height: 50px; width: auto; object-fit: contain; }
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (ZIG-ZAG) ================== */
-.hero-section { width: 100%; min-height: 85vh; display: flex; align-items: center; padding: 60px 10%; background: transparent !important; }
+/* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
+.hero-section { 
+    width: 100%; 
+    min-height: 85vh; 
+    display: flex; 
+    align-items: center; 
+    padding: 60px 10%; 
+    background: transparent !important; 
+}
 .hero-content { max-width: 800px; width: 100%; }
 #inicio-1 { justify-content: flex-start; text-align: left; }
 #inicio-2 { justify-content: flex-end; text-align: right; }
@@ -33,28 +71,24 @@ nav a:hover { color: var(--accent-lilac); }
 .resultado-texto { font-size: 1.1rem; font-weight: 300; margin-bottom: 35px !important; }
 .resultado-texto span { color: var(--accent-lilac); font-style: italic; }
 
-/* Botón CTA Azul (Estilo 1) */
-.btn-cta { background: var(--primary); color: white; padding: 18px 50px; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; transition: 0.3s; display: inline-block; text-decoration: none; }
+.btn-cta { 
+    background: var(--primary); 
+    color: white; 
+    padding: 18px 50px; 
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: 0.3s; 
+    display: inline-block; 
+    text-decoration: none; 
+}
+#inicio-2 .btn-cta { margin-left: auto; display: block; width: fit-content; }
 
-/* ================== 5. BOTÓN CTA CÁPSULA LILA (EL QUE PEDISTE) ================== */
+/* ================== 5. BOTÓN CTA CÁPSULA LILA ================== */
 .cta-container-centro { display: flex; justify-content: center; margin-top: 40px; }
 .cta-container-derecha { display: flex; justify-content: flex-end; width: 100%; }
-
-.btn-cta-neon { 
-    background-color: var(--accent-lilac); 
-    color: #000000; 
-    text-decoration: none; 
-    font-size: 1.2rem; 
-    font-weight: 700; 
-    padding: 16px 45px; 
-    border-radius: 50px; /* Cápsula perfecta */
-    text-transform: uppercase; 
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    border: 2px solid var(--accent-lilac);
-    box-shadow: 0 10px 30px rgba(178, 170, 238, 0.3);
-    display: inline-block;
-}
-.btn-cta-neon:hover { background: transparent; color: var(--accent-lilac); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(178, 170, 238, 0.5); }
+.btn-cta-neon { background-color: var(--accent-lilac); color: #000000; text-decoration: none; font-size: 1.2rem; font-weight: 700; padding: 16px 45px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; border: 2px solid var(--accent-lilac); box-shadow: 0 10px 30px rgba(178, 170, 238, 0.3); display: inline-block; }
 
 /* ================== 6. BANNER Y CARRUSEL ================== */
 .banner-estadistica { padding: 80px 20px; text-align: center; font-weight: 300; font-size: 1.4rem; background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(5px); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); }
@@ -75,33 +109,79 @@ nav a:hover { color: var(--accent-lilac); }
 .stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
 .stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 300; text-align: center; }
 
-/* ================== 8. REGISTRO, WHATSAPP Y FOOTER ================== */
+/* ================== 8. FORMULARIO DE CONTACTO (ESTILIZADO) ================== */
 #registro { padding: 100px 5%; display: flex; justify-content: center; }
-.form-container-glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); padding: 50px; border-radius: 24px; width: 100%; max-width: 550px; text-align: center; border: 1px solid var(--border-glass); }
-input { width: 100%; padding: 16px; margin: 12px 0; border-radius: 10px; border: none; background: rgba(255,255,255,0.95); font-family: 'Poppins', sans-serif; }
-footer { background: transparent; padding: 60px 20px; text-align: center; border-top: 1px solid var(--border-glass); font-weight: 300; }
+.form-container-glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(25px); 
+    padding: 60px 40px; 
+    border-radius: 24px; 
+    width: 100%; 
+    max-width: 600px; 
+    text-align: center; 
+    border: 1px solid var(--border-glass); 
+}
+.form-container-glass h2 { font-size: 2rem; font-weight: 600; margin-bottom: 40px; }
 
+form { display: flex; flex-direction: column; gap: 20px; }
+
+input { 
+    width: 100%; 
+    padding: 18px; 
+    border-radius: 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    background: rgba(255, 255, 255, 0.05); 
+    color: white; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+input:focus { border-color: var(--accent-lilac); outline: none; background: rgba(255, 255, 255, 0.1); }
+input::placeholder { color: rgba(255, 255, 255, 0.4); }
+
+#registro .btn-cta { width: 100%; padding: 18px; font-size: 1.1rem; }
+
+/* ================== 9. ESTILOS DEL FOOTER ================== */
+footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 80px 10% 40px; border-top: 1px solid var(--border-glass); width: 100%; }
+.footer-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; max-width: 1300px; margin: 0 auto; }
+.footer-col { flex: 1; }
+.footer-col h3 { color: var(--accent-lilac); font-size: 1.1rem; font-weight: 600; margin-bottom: 25px; text-transform: uppercase; }
+.footer-col p, .footer-col a { color: var(--white-pure); font-weight: 300; font-size: 0.9rem; text-decoration: none; line-height: 2; }
+.footer-col a:hover { color: var(--accent-lilac); }
+.footer-links { list-style: none; }
+.footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.logo-footer { height: 55px; width: auto; margin-bottom: 15px; }
+.footer-slogan { font-size: 0.8rem !important; opacity: 0.7; font-style: italic; }
+.footer-bottom { text-align: center; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 0.75rem; opacity: 0.5; }
+
+/* ================== 10. BOTÓN WHATSAPP ================== */
 .whatsapp-btn { position: fixed; bottom: 30px; left: 30px; z-index: 9999; transition: 0.3s; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3)); }
 .whatsapp-icon { width: 65px; height: auto; }
 
-/* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
+/* ================== 11. ADAPTACIÓN PARA MÓVILES (FULL) ================== */
 @media (max-width: 768px) { 
     body::before { background-image: url('./Assets/mob7.jpeg'); position: absolute; }
-    header { flex-direction: column !important; gap: 15px !important; padding: 15px !important; }
+    header { flex-direction: column !important; align-items: center !important; gap: 15px !important; padding: 15px !important; }
     .logo-img { height: 35px !important; }
     .hero-section { justify-content: center !important; text-align: center !important; padding: 120px 5% 40px !important; min-height: 50vh !important; }
-    .hero-content { max-width: 100% !important; }
     .hero-content h1 { font-size: 2.1rem !important; line-height: 1.0 !important; }
-    .hero-content p, .resultado-texto { font-size: 1.1rem !important; line-height: 1.5 !important; margin-left: 0 !important; max-width: 100% !important; text-align: center !important; }
+    .hero-content p, .resultado-texto { font-size: 1.1rem !important; line-height: 1.5 !important; margin-left: 0 !important; text-align: center !important; }
     .btn-cta { margin: 0 auto !important; display: block !important; }
+
     .carousel-track { flex-direction: column !important; transform: none !important; gap: 20px !important; align-items: center !important; }
     .carousel-container { overflow: visible !important; }
     .card { min-width: 100% !important; max-width: 95% !important; opacity: 1 !important; transform: scale(1) !important; padding: 35px 20px !important; text-align: center !important; }
     .stat-highlight { font-size: 3.5rem !important; }
-    .cta-container-derecha { justify-content: center; }
     .btn-cta-neon { font-size: 0.9rem !important; padding: 12px 35px !important; width: auto !important; border-radius: 50px !important; }
+
+    .footer-container { flex-direction: column; text-align: center; gap: 50px; }
+    .footer-logo { order: -1; }
+    .footer-col { width: 100%; }
+
     .chevron-container { flex-direction: column; gap: 10px; }
     .chevron-item { margin-left: 0; clip-path: none !important; border-radius: 10px; height: 100px; }
     .whatsapp-btn { bottom: 20px; left: 20px; }
     .whatsapp-icon { width: 50px; }
+    
+    .form-container-glass { padding: 40px 20px; }
 }
