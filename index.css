@@ -282,37 +282,19 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     .form-container-glass { padding: 40px 20px !important; width: 95% !important; }
 
     /* Footer Móvil */
-    .footer-container { flex-direction: column; text-align: center; gap: 50px; }
-    .contact-links, .social-grid { justify-content: center; }
-    .footer-link-item { justify-content: center; }
-    .footer-col:last-child { display: none !important; }
-    .footer-logo { order: 2; }
-    .logo-footer { height: 100px; }
+     /* FOOTER MÓVIL OPTIMIZADO */
+    .footer-container { flex-direction: column !important; text-align: center !important; gap: 40px !important; align-items: center !important; }
+    .footer-col { width: 100% !important; }
+    .footer-col:last-child { display: none !important; } /* Ocultar Navegación */
+    
+    .footer-link-item { justify-content: center !important; }
+    
+    .footer-logo { order: 2 !important; margin-top: 20px; }
+    .logo-footer { height: 45px !important; }
+    
+    /* Evitar que WhatsApp tape el copyright */
+    footer { padding-bottom: 100px !important; } 
 
-     .chevron-container { 
-        display: grid !important; 
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 15px !important; 
-        padding: 0 5% !important; 
-    }
-
-    .chevron-item { 
-        width: 100% !important; 
-        margin-left: 0 !important; 
-        height: 140px !important; /* Más alto en móvil */
-        clip-path: none !important; 
-        border-radius: 15px !important; 
-        background: rgba(255, 255, 255, 0.08) !important;
-        border: 1px solid var(--border-glass) !important;
-    }
-
-    .chevron-item .content {
-        padding: 15px !important;
-    }
-
-    .step-title { font-size: 0.9rem !important; }
-    .step-desc { font-size: 0.7rem !important; }
-
-    .whatsapp-btn { bottom: 20px; right: 20px; left: auto; }
-    .whatsapp-icon { width: 50px; }
+    .whatsapp-btn { bottom: 20px !important; right: 20px !important; left: auto !important; }
+    .whatsapp-icon { width: 50px !important; }
 }
