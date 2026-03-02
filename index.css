@@ -109,14 +109,71 @@ nav a:hover { color: var(--accent-lilac); }
 
 .cta-container-centro { display: flex; justify-content: center; margin-top: 40px; }
 
-/* ================== 7. SECCIÓN 6 FLECHAS ================== */
-#estadisticas { padding: 100px 0; display: flex; justify-content: center; width: 100%; }
-.chevron-container { display: flex; width: 95%; max-width: 1200px; gap: 0; }
-.chevron-item { flex: 1; height: 120px; background: rgba(255,255,255,0.05); backdrop-filter: blur(8px); clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%, 12% 50%); margin-left: -3.5%; display: flex; justify-content: center; align-items: center; transition: 0.3s; border-left: 1px solid var(--border-glass); }
-.chevron-item:first-child { margin-left: 0; clip-path: polygon(0% 0%, 88% 0%, 100% 50%, 88% 100%, 0% 100%); }
-.stat-number { font-size: 2rem; font-weight: 700; display: block; text-align: center; }
-.stat-label { font-size: 0.75rem; text-transform: uppercase; font-weight: 300; text-align: center; }
 
+/* ================== 7. SECCIÓN 6 FLECHAS (CHEVRON REFINADO) ================== */
+#estadisticas { 
+    padding: 100px 0; 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.chevron-container { 
+    display: flex; 
+    width: 98%; 
+    max-width: 1400px; 
+    gap: 0; 
+}
+
+.chevron-item { 
+    flex: 1; 
+    height: 180px; /* Aumentamos altura para que quepa el texto */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    /* Pico más suave (8% y 92%) para ganar espacio lateral */
+    clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%); 
+    margin-left: -3%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.3s;
+    border-left: 1px solid var(--border-glass);
+}
+
+.chevron-item:first-child { 
+    margin-left: 0; 
+    clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%); 
+}
+
+.chevron-item:hover { 
+    background: rgba(178, 170, 238, 0.15); /* Tinte lila al pasar el mouse */
+    z-index: 10;
+}
+
+.chevron-item .content {
+    text-align: center;
+    padding: 0 15% 0 20%; /* Padding extra para evitar el área del pico */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.step-title { 
+    font-size: 1.1rem; 
+    font-weight: 700; 
+    color: var(--accent-lilac); 
+    display: block; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.step-desc { 
+    font-size: 0.75rem; 
+    line-height: 1.3;
+    font-weight: 300; 
+    color: white;
+    display: block;
+}
 /* ================== 8. FORMULARIO DE REGISTRO (CRISTAL) ================== */
 #registro { padding: 100px 5%; display: flex; justify-content: center; }
 .form-container-glass { 
@@ -207,6 +264,30 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     .footer-col:last-child { display: none !important; }
     .footer-logo { order: 2; }
     .logo-footer { height: 100px; }
+
+     .chevron-container { 
+        display: grid !important; 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 15px !important; 
+        padding: 0 5% !important; 
+    }
+
+    .chevron-item { 
+        width: 100% !important; 
+        margin-left: 0 !important; 
+        height: 140px !important; /* Más alto en móvil */
+        clip-path: none !important; 
+        border-radius: 15px !important; 
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid var(--border-glass) !important;
+    }
+
+    .chevron-item .content {
+        padding: 15px !important;
+    }
+
+    .step-title { font-size: 0.9rem !important; }
+    .step-desc { font-size: 0.7rem !important; }
 
     .whatsapp-btn { bottom: 20px; right: 20px; left: auto; }
     .whatsapp-icon { width: 50px; }
