@@ -84,55 +84,52 @@ nav a:hover { color: var(--accent-lilac); }
 
 
 /* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
+/* ================== 4. SECCIONES HERO (POSICIONAMIENTO Y LEGIBILIDAD) ================== */
 .hero-section { 
     width: 100%; 
-    min-height: 80vh; 
+    min-height: 85vh; /* Un poco más de altura para dar aire */
     display: flex; 
     align-items: center; 
-    padding: 60px 8%; 
+    padding: 60px 10%; 
     background: transparent !important; 
 }
 
-/* General: Texto a la izquierda */
 .hero-content { 
-    max-width: 700px; 
+    max-width: 800px; 
     width: 100%;
 }
 
-/* SECCIÓN 1 (#inicio-1): Se mantiene a la izquierda */
-#inicio-1 {
-    justify-content: flex-start;
-    text-align: left;
+/* SECCIÓN 1: IZQUIERDA */
+#inicio-1 { justify-content: flex-start; text-align: left; }
+
+/* SECCIÓN 2: DERECHA (MEJORADA) */
+#inicio-2 { 
+    justify-content: flex-end; 
+    text-align: right; 
 }
 
-/* SECCIÓN 2 (#inicio-2): MOVER A LA DERECHA */
-#inicio-2 {
-    justify-content: flex-end; /* Empuja el contenido al final (derecha) */
-    text-align: right;         /* Alinea las líneas de texto a la derecha */
+/* OPTIMIZACIÓN DE LECTURA PARA EL PÁRRAFO LARGO */
+#inicio-2 .hero-content p { 
+    margin-left: auto; /* Mantiene el bloque pegado a la derecha */
+    max-width: 580px;  /* Reducimos el ancho: el ojo lee mejor líneas cortas */
+    line-height: 1.8;  /* Aumentamos el espacio entre líneas para que "respire" */
+    letter-spacing: 0.5px; /* Un toque de espacio entre letras para claridad */
+    margin-bottom: 40px;
 }
 
-/* Ajuste específico para el botón en la sección derecha */
-#inicio-2 .btn-cta {
-    margin-left: auto; /* Asegura que el botón se pegue a la derecha */
+/* RESALTADOS DENTRO DEL TEXTO */
+#inicio-2 .hero-content strong {
+    font-weight: 600;
+    color: var(--accent-lilac); /* Las palabras clave brillan en lila */
 }
 
-/* Estilos de fuente (Se mantienen Poppins y blanco) */
+/* Títulos y Botón */
 .hero-content h1 { 
     font-size: clamp(2.5rem, 6vw, 4.2rem); 
     font-weight: 600; 
-    color: #ffffff;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
     line-height: 1.1; 
     margin-bottom: 25px;
-}
-
-.hero-content p { 
-    font-size: clamp(1.1rem, 3vw, 1.4rem); 
-    font-weight: 300; 
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.9); 
-    margin-bottom: 35px;
-    line-height: 1.6;
 }
 
 .btn-cta { 
@@ -144,23 +141,10 @@ nav a:hover { color: var(--accent-lilac); }
     cursor: pointer; 
     font-weight: 600; 
     transition: 0.3s;
-    display: block; /* Cambiado a block para manejar márgenes automáticos */
-    width: fit-content;
+    display: inline-block; 
 }
 
-.btn-cta:hover { transform: scale(1.05); background: #1d4ed8; }
-
-/* REGLAS RESPONSIVE (En móviles todo vuelve al centro) */
-@media (max-width: 768px) { 
-    .hero-section {
-        justify-content: center !important;
-        text-align: center !important;
-        padding: 40px 5%;
-    }
-    #inicio-2 .btn-cta {
-        margin: 0 auto;
-    }
-}
+#inicio-2 .btn-cta { margin-left: auto; display: block; width: fit-content; }
 
 /* ================== 5. BANNER DE AUTORIDAD ================== */
 .banner-estadistica { 
