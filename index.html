@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAON</title>
-    <link rel="icon" href="./Assets/logo_maon.jpg" type="image/png">
-    <!-- IMPORTACIÓN DE FUENTE POPPINS -->
+    <title>MAON | Automatización</title>
+    <link rel="icon" href="./Assets/maon_letra_logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Enlace al archivo de estilos -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -17,11 +15,9 @@
         <a href="#inicio-1" class="logo-btn">
             <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-img">
         </a>
-        
         <nav>
             <ul>
                 <li><a href="#caracteristicas">Servicios</a></li>
-                <!-- CORRECCIÓN: Ahora apunta a #inicio-2 -->
                 <li><a href="#inicio-2">¿Qué hacemos?</a></li>
                 <li><a href="#estadisticas">Proceso</a></li>
                 <li><a href="#registro">Contacto</a></li>
@@ -29,26 +25,23 @@
         </nav>
     </header>
 
-
     <main>
         <!-- ================== 2. PRIMERA SECCIÓN HERO ================== -->
         <section id="inicio-1" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1> Multiplica tus ventas automatizando tus conversaciones</h1>
-                    <button class="btn-cta">Empezar Ahora</button>
+                    <h1>Multiplica tus ventas automatizando tus conversaciones</h1>
+                    <a href="#registro" class="btn-cta">Empezar Ahora</a>
                 </div>
             </div>
         </section>
 
-
-        <!-- ================== 3. BANNER DE AUTORIDAD ================== -->
+        <!-- ================== 3. BANNER DE DATOS IA ================== -->
         <section class="banner-estadistica">
             <p>El 85% de los dueños de negocios que usan IA reportan un incremento notable en su eficiencia operativa.</p>
         </section>
 
-
-        <!-- ================== 4. SECCIÓN CARRUSEL ================== -->
+        <!-- ================== 4. SECCIÓN CARRUSEL (BENEFICIOS) ================== -->
         <section id="caracteristicas">
             <div class="carousel-window">
                 <div class="carousel-container">
@@ -65,11 +58,10 @@
                     </div>
                 </div>
             </div>
-            <div class="cta-container-carrusel">
+            <div class="cta-container-centro">
                 <a href="#registro" class="btn-cta-neon">Empieza a vender 24/7</a>
             </div>
         </section>
-
 
         <!-- ================== 5. SEGUNDA SECCIÓN HERO (¿QUÉ HACEMOS?) ================== -->
         <section id="inicio-2" class="hero-section">
@@ -80,13 +72,18 @@
                         En MAON convertimos el <strong>caos de mensajes, seguimientos y ventas manuales</strong> en un sistema que trabaja por tu negocio <strong>24/7</strong>. 
                         Diseñamos estrategias, entrenamos nuestra IA para que hable con el <strong>ADN de tu marca</strong> y automatizamos tu atención al cliente, tu agenda y tu proceso comercial completo, <strong>sin que pierdas la esencia humana.</strong>
                     </p>
-                    <button class="btn-cta">Saber más</button>
+                    <p class="resultado-texto">
+                        El resultado: <span>Menos carga operativa, respuestas inmediatas y más clientes comprando o agendando, incluso cuando no estás conectado.</span>
+                    </p>
+                    <!-- NUEVO BOTÓN ESTILO CÁPSULA LILA -->
+                    <div class="cta-container-derecha">
+                        <a href="#registro" class="btn-cta-neon">Quiero automatizar mi negocio</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- ================== 6. SECCIÓN DE PROCESO (CHEVRON) ================== -->
+        <!-- ... (Resto de secciones: 6. Proceso, 7. Registro, 8. Footer) ... -->
         <section id="estadisticas">
             <div class="chevron-container">
                 <div class="chevron-item"><div class="content"><span class="stat-number">1.000+</span><span class="stat-label">Clientes</span></div></div>
@@ -98,12 +95,9 @@
             </div>
         </section>
 
-
-        <!-- ================== 7. SECCIÓN DE CONTACTO ================== -->
         <section id="registro">
             <div class="form-container-glass">
                 <h2>¿Listo para la transformación?</h2>
-                <p>Déjanos tus datos y un experto se pondrá en contacto contigo.</p>
                 <form>
                     <input type="text" placeholder="Nombre completo" required>
                     <input type="email" placeholder="Correo electrónico corporativo" required>
@@ -113,17 +107,12 @@
         </section>
     </main>
 
+    <footer><p>&copy; 2026 MAON. Todos los derechos reservados.</p></footer>
 
-    <!-- ================== 8. PIE DE PÁGINA ================== -->
-    <footer></footer>
-
-
-    <!-- ================== 9. SCRIPTS DE INTERACCIÓN ================== -->
     <script src="index.js"></script>
 
-    <!-- ================== 10. BOTÓN FLOTANTE DE WHATSAPP ================== -->
     <a href="https://wa.me/573504032222" class="whatsapp-btn" target="_blank">
-        <img src="./Assets/llamada-telefonica.png" alt="WhatsApp MAON" class="whatsapp-icon">
+        <img src="./Assets/llamada-telefonica.png" alt="WhatsApp" class="whatsapp-icon">
     </a>
 
 </body>
