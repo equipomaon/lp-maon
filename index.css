@@ -119,6 +119,6 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     .footer-col:last-child { display: none !important; }
     .chevron-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; }
     .chevron-item { width: 100% !important; margin-left: 0 !important; height: 110px !important; clip-path: none !important; border-radius: 15px !important; }
-    .whatsapp-btn { bottom: 20px; left: 20px; }
+    .whatsapp-btn { bottom: 20px; right: 20px; }
     .whatsapp-icon { width: 50px; }
 }
