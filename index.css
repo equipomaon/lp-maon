@@ -194,68 +194,53 @@ footer { background: transparent; padding: 60px 20px; text-align: center; border
 }
 
 /* ================== 9. ADAPTACIÓN PARA MÓVILES ================== */
-/* ================== 9. ADAPTACIÓN PARA MÓVILES (OPTIMIZADA) ================== */
+/* ================== 9. ADAPTACIÓN PARA MÓVILES (CENTRADO TOTAL) ================== */
 @media (max-width: 768px) { 
 
-    /* 1. HEADER: Más compacto para ganar espacio visual */
-    header {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important; /* Reducimos el espacio entre logo y menú */
-        padding: 10px 5% !important;
-        background: rgba(0, 0, 0, 0.5) !important;
-    }
-
-    .logo-img { height: 30px !important; } /* Logo ligeramente más pequeño */
-    nav ul { gap: 10px !important; }
-    nav a { font-size: 0.75rem !important; }
-
-    /* 2. HERO: Subimos el contenido y ajustamos el aire */
+    /* 1. HERO: Forzamos el centrado de los contenedores */
     .hero-section {
-        padding-top: 90px !important; /* Menos espacio arriba: el texto sube */
+        padding-top: 80px !important;
         padding-bottom: 40px !important;
-        min-height: 70vh !important; /* Reducimos la altura mínima para que no sobre tanto espacio */
-        justify-content: center !important;
-        text-align: center !important;
+        min-height: 50vh !important;
+        height: auto !important;
+        display: flex !important;
+        justify-content: center !important; /* Centra el bloque horizontalmente */
+        align-items: center !important;    /* Centra el bloque verticalmente */
+        text-align: center !important;     /* Centra las líneas de texto */
     }
 
     .hero-content {
         max-width: 100% !important;
-        padding: 0 10px !important;
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el botón respecto al texto */
     }
 
-    /* 3. TÍTULO: Más apretado y legible */
+    /* 2. TÍTULO: Centrado de líneas */
     .hero-content h1 {
-        font-size: 1.9rem !important; /* Un poco más pequeño para evitar saltos raros */
-        line-height: 1.1 !important; /* Líneas más juntas */
-        margin-bottom: 20px !important; /* Menos espacio antes del botón */
-        font-weight: 600;
+        text-align: center !important; 
+        font-size: 1.8rem !important; 
+        line-height: 1.1 !important;
+        margin-bottom: 25px !important;
+        width: 100%;
     }
 
-    /* 4. BOTÓN: Ajuste proporcional */
+    /* 3. BOTÓN: Centrado automático */
     .btn-cta {
+        margin: 0 auto !important; /* Asegura que el botón se quede al centro */
         padding: 14px 30px !important;
         font-size: 0.95rem !important;
-        width: auto !important; /* Que no ocupe todo el ancho si no es necesario */
-        min-width: 200px;
-        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
     }
 
-    /* 5. CARRUSEL VERTICAL: Sin espacios muertos */
-    .carousel-track {
+    /* Mantener el resto del diseño compacto */
+    header {
         flex-direction: column !important;
-        gap: 20px !important;
+        padding: 10px !important;
+        gap: 8px !important;
     }
-    .card {
-        padding: 30px 20px !important;
-        min-height: auto !important;
-    }
-    .stat-highlight { font-size: 3.2rem !important; }
-
-    /* 6. BOTÓN WHATSAPP MÓVIL */
-    .whatsapp-btn {
-        bottom: 15px !important;
-        left: 15px !important;
-    }
-    .whatsapp-icon { width: 45px !important; }
+    
+    .logo-img { height: 28px !important; }
 }
