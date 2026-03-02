@@ -31,24 +31,57 @@ body::before {
     transition: background-image 0.5s ease; 
 }
 
-/* ================== 3. ESTILOS DE CABECERA ================== */
+/* ================== 3. ESTILOS DE CABECERA (HEADER) ================== */
+
 header { 
-    backdrop-filter: blur(10px); 
-    padding: 1.2rem 5%; 
+    backdrop-filter: blur(15px); 
+    padding: 1rem 5%; /* Reducimos un poco el padding para que el logo luzca mejor */
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     position: sticky; 
     top: 0; 
     z-index: 1000; 
-    background: transparent; 
+    background: rgba(0, 0, 0, 0.2); /* Fondo sutil para proteger el logo */
 }
-.logo { font-weight: 600; font-size: 1.5rem; letter-spacing: -1px; }
+
+/* Contenedor del logo tipo botón */
+.logo-btn {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    text-decoration: none;
+}
+
+/* Estilo de la imagen del logo */
+.logo-img {
+    height: 50px; /* Ajusta este tamaño según tu diseño */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.logo-btn:hover {
+    transform: scale(1.05); /* Se agranda un poquito */
+    filter: brightness(1.2); /* Brilla un poco más */
+}
+
+.logo-btn:active {
+    transform: scale(0.95); /* Efecto de "presionado" */
+}
+
+/* Estilos de navegación se mantienen */
 nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (SUBTÍTULOS EN LIGHT 300) ================== */
+/* Ajuste móvil para el logo */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 40px; /* Logo más pequeño en celulares */
+    }
+}
+
 
 /* ================== 4. SECCIONES HERO (ALINEACIÓN DUAL) ================== */
 .hero-section { 
