@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAON | Automatización</title>
+
+     <!-- 1. BOOTSTRAP CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="./Assets/maon_letra_logo.png" type="image/png">
     <!-- IMPORTACIÓN DE FUENTE POPPINS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -135,49 +138,109 @@
         <section id="para-quien-es-maon" class="process-section">
             <h1 class="section-title">Para quién es MAON</h1>
             
-            <div class="chevron-container">
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Atraemos</span>
-                        <span class="step-desc">Llevamos tu marca a personas con interés real.</span>
-                    </div>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    E-commerce
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Filtramos</span>
-                        <span class="step-desc">Nuestra IA califica y segmenta prospectos ideales.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Seguimiento</span>
-                        <span class="step-desc">Acompañamos al prospecto hasta la decisión.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Conversión</span>
-                        <span class="step-desc">Se realiza la compra o agendamiento en agenda.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Base de datos</span>
-                        <span class="step-desc">Leads organizados para futuras acciones.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Re-impacto</span>
-                        <span class="step-desc">Promociones específicas y recordatorios.</span>
-                    </div>
                 </div>
             </div>
 
-            <div class="cta-container-centro">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Servicios digitales
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Marcas personales/ Workshop / Talleres
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Negocios con alto volumen de mensajes.
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Empresas B2B 
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Retail 
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+            
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Empresas que ya venden, pero quieren vender más y mejor
+                </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+                </div>
+            </div>
+
+              <!-- NUEVO BOTÓN CTA -->
+            <div class="cta-container-centro" style="margin-top: 50px; margin-bottom: 30px;">
                 <a href="#registro" class="btn-cta-neon">Activa tu sistema de ventas</a>
             </div>
+
+            </div>
         </section>
+
+   
 
         <!-- ================== 7. SECCIÓN DE CONTACTO (REGISTRO) ================== -->
         <section id="registro">
@@ -216,17 +279,12 @@
                 <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-footer">
                 <p class="copyright-text">© 2026 MAON. Inteligencia en cada mensaje.</p>
             </div>
-            <div class="footer-col">
-                <h3>Navegación</h3>
-                <ul class="footer-links">
-                    <li><a href="#caracteristicas">Servicios</a></li>
-                    <li><a href="#inicio-2">¿Qué hacemos?</a></li>
-                    <li><a href="#como-lo-hacemos">Proceso</a></li>
-                    <li><a href="#registro">Contacto</a></li>
-                </ul>
-            </div>
+           
         </div>
     </footer>
+
+      <!-- 2. BOOTSTRAP JS (Necesario para que el acordeón funcione) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script src="index.js"></script>
 
