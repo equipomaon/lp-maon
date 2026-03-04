@@ -37,7 +37,7 @@ body::before {
     filter: brightness(0.9); 
 }
 
-/* ================== 3. ESTILOS DE CABECERA ================== */
+
 
 /* ================== 3. ESTILOS DE CABECERA (NAVBAR) ================== */
 .navbar { 
@@ -66,6 +66,7 @@ body::before {
 
 
 /* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
+/* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
 .hero-section { 
     width: 100%; 
     min-height: 85vh; 
@@ -77,43 +78,54 @@ body::before {
 
 .hero-content { max-width: 800px; width: 100%; }
 
+/* Alineación para la sección de Inicio 1 (Izquierda) */
+#inicio-1 { justify-content: flex-start; text-align: left; }
+
+/* --- CONFIGURACIÓN ESPECÍFICA ¿QUÉ HACEMOS? (INICIO-2) --- */
+#inicio-2 { 
+    justify-content: flex-end; 
+    text-align: right; 
+}
+
+/* Aplicamos el tamaño 1.4rem (igual al banner) a todo el bloque */
 #inicio-2 .hero-content p, 
 #inicio-2 .hero-content strong, 
 #inicio-2 .resultado-texto, 
 #inicio-2 .resultado-texto span { 
-    color: #ffffff !important; /* Blanco puro para TODO */
-    text-align: right;        /* Mantenemos alineación derecha */
+    font-size: 1.4rem !important; /* IGUAL AL BANNER ESTADÍSTICO */
+    color: #ffffff !important;    /* TODO EN BLANCO */
+    text-align: right; 
+    line-height: 1.7;             /* Espaciado para legibilidad */
 }
 
-/* Color blanco para la frase de resultado */
-.resultado-texto { 
-    font-size: 1.1rem; 
-    font-weight: 300; 
-    margin-bottom: 35px !important; 
-    color: var(--white-pure); /* Asegura que el texto base sea blanco */
-}
-
-.resultado-texto span { 
-    color: var(--white-pure) !important; /* CAMBIO: Ahora es blanco en lugar de lila */
-    font-style: italic; 
+#inicio-2 .hero-content p { 
+    margin-left: auto; 
+    max-width: 650px; 
+    font-weight: 300;
+    margin-bottom: 25px;
 }
 
 #inicio-2 .hero-content strong { 
-    font-weight: 600; 
-    color: var(--accent-lilac); /* Mantenemos las negritas en lila para dar énfasis */
+    font-weight: 700; /* Mismo tamaño pero más grueso */
 }
 
-.hero-content { max-width: 800px; width: 100%; }
-#inicio-1 { justify-content: flex-start; text-align: left; }
-#inicio-2 { justify-content: flex-end; text-align: right; }
+.resultado-texto { 
+    margin-top: 35px !important; 
+    font-weight: 400; 
+}
 
-/* Este es el estilo que estamos copiando para los demás títulos */
-.hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 600; text-shadow: 0 4px 20px rgba(0,0,0,0.8); line-height: 1.1; margin-bottom: 25px; }
-.hero-content p { font-size: clamp(1.1rem, 3vw, 1.4rem); font-weight: 300; line-height: 1.8; margin-bottom: 20px; }
-#inicio-2 .hero-content p { margin-left: auto; max-width: 580px; }
-#inicio-2 .hero-content strong { font-weight: 600; color: var(--accent-lilac); }
-.resultado-texto { font-size: 1.1rem; font-weight: 300; margin-bottom: 35px !important; }
-.resultado-texto span { color: var(--accent-lilac); font-style: italic; }
+.resultado-texto span { 
+    font-style: italic; 
+}
+
+/* Título de la sección Hero */
+.hero-content h1 { 
+    font-size: clamp(2.5rem, 6vw, 4.2rem); 
+    font-weight: 600; 
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
+    line-height: 1.1; 
+    margin-bottom: 25px; 
+}
 
 /* ================== 5. BOTONES (CÁPSULA LILA) ================== */
 .btn-cta, .btn-cta-neon { 
