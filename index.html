@@ -15,19 +15,38 @@
 <body>
 
     <!-- ================== 1. CABECERA Y NAVEGACIÓN ================== -->
-    <header>
-        <a href="#inicio-1" class="logo-btn">
+   <!-- ================== 1. CABECERA Y NAVEGACIÓN (RESPONSIVE) ================== -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top maon-navbar">
+    <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand logo-btn" href="#inicio-1">
             <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-img">
         </a>
-        <nav>
-            <ul>
-                <li><a href="#caracteristicas">Servicios</a></li>
-                <li><a href="#inicio-2">¿Qué hacemos?</a></li>
-                <li><a href="#como-lo-hacemos">¿Cómo lo hacemos?</a></li>
-                <li><a href="#para-quien-es-maon">Para quien es MAON</a></li>
+
+        <!-- Botón Hamburguesa -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenedor de Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-lg-4 text-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-light" href="#caracteristicas">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-light" href="#inicio-2">¿Qué hacemos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-light" href="#como-lo-hacemos">¿Cómo lo hacemos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-light" href="#registro">Contacto</a>
+                </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
+</nav>
 
     <main>
         <!-- ================== 2. PRIMERA SECCIÓN HERO ================== -->

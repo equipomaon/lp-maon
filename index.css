@@ -38,25 +38,31 @@ body::before {
 }
 
 /* ================== 3. ESTILOS DE CABECERA ================== */
-header { 
+
+/* ================== 3. ESTILOS DE CABECERA (NAVBAR) ================== */
+.navbar { 
     backdrop-filter: blur(15px); 
-    padding: 1rem 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6) !important; 
+    border-bottom: 1px solid var(--border-glass);
+    padding: 0.8rem 0;
 }
 
-.logo-btn { display: flex; align-items: center; transition: 0.3s; text-decoration: none; }
-.logo-img { height: 50px; width: auto; object-fit: contain; }
-.logo-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+.logo-img { height: 45px; width: auto; transition: 0.3s; }
 
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
-nav a:hover { color: var(--accent-lilac); }
+.nav-link { 
+    color: white !important;
+    font-weight: 300;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover { 
+    color: var(--accent-lilac) !important; 
+}
+
+/* Personalización del botón hamburguesa */
+.navbar-toggler { border: none !important; box-shadow: none !important; }
+.navbar-toggler-icon { filter: brightness(0) invert(1); } /* Hace el icono blanco */
 
 
 /* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
@@ -237,6 +243,31 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
         height: 100vh; 
         position: fixed; 
     }
+
+    /* --- ESTILO DEL MENÚ DESPLEGABLE (EL SOMBRERADO) --- */
+    .navbar-collapse {
+        /* Fondo oscuro con sombreado intenso para dar profundidad */
+        background: rgba(5, 10, 20, 0.98) !important; 
+        backdrop-filter: blur(20px);
+        
+        /* Sombreado externo (Box Shadow) y brillo lila sutil */
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 
+                    0 0 15px rgba(178, 170, 238, 0.1); 
+        
+        margin-top: 15px;
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid rgba(178, 170, 238, 0.2); /* Borde suave lila */
+    }
+
+    .nav-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 5px 0;
+    }
+
+    .nav-item:last-child { border-bottom: none; }
+
+    
 
     /* 2. Ajuste de Títulos: Más pequeños para que no se corten */
     .hero-content h1, .section-title { 
