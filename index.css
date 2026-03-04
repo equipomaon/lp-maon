@@ -77,19 +77,12 @@ body::before {
 
 .hero-content { max-width: 800px; width: 100%; }
 
-/* Alineación para la sección de Inicio 1 (Izquierda) */
-#inicio-1 { justify-content: flex-start; text-align: left; }
-
-/* Alineación para la sección ¿Qué hacemos? (Derecha) */
-#inicio-2 { 
-    justify-content: flex-end; 
-    text-align: right; /* Alinea el título y el contenedor a la derecha */
-}
-
-#inicio-2 .hero-content p { 
-    text-align: right; /* Obliga a los párrafos a alinearse de derecha a izquierda */
-    margin-left: auto; 
-    max-width: 650px; /* Ajustamos un poco el ancho para que el bloque se vea mejor */
+#inicio-2 .hero-content p, 
+#inicio-2 .hero-content strong, 
+#inicio-2 .resultado-texto, 
+#inicio-2 .resultado-texto span { 
+    color: #ffffff !important; /* Blanco puro para TODO */
+    text-align: right;        /* Mantenemos alineación derecha */
 }
 
 /* Color blanco para la frase de resultado */
@@ -233,7 +226,7 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
 .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: 0.3s; }
 .whatsapp-icon { width: 65px; height: auto; }
 
-/* ================== 12. ADAPTACIÓN PARA MÓVILES ================== */
+
 /* ================== 12. ADAPTACIÓN PARA MÓVILES (OPTIMIZADA) ================== */
 @media (max-width: 768px) { 
     /* 1. Fondo fijo para evitar saltos al hacer scroll */
