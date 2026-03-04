@@ -58,7 +58,7 @@ nav ul { display: flex; list-style: none; gap: 20px; }
 nav a { text-decoration: none; color: var(--white-pure); font-weight: 300; transition: 0.3s; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-lilac); }
 
-/* ================== 4. SECCIONES HERO (ZIG-ZAG) ================== */
+
 /* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
 .hero-section { 
     width: 100%; 
@@ -150,6 +150,12 @@ nav a:hover { color: var(--accent-lilac); }
 
 .cta-container-centro { display: flex; justify-content: center; margin-top: 40px; }
 
+.card p, 
+.card-content { 
+    color: #ffffff !important; /* Forzamos el color blanco puro en las letras */
+    opacity: 1 !important;     /* Quitamos cualquier transparencia que las haga ver oscuras */
+}
+
 /* ================== NUEVA: ESTILOS DE TÍTULOS GLOBALES ================== */
 .section-title {
     font-size: clamp(2.5rem, 6vw, 4.2rem); /* IGUAL AL HERO */
@@ -205,19 +211,105 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
 .footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .copyright-text { font-size: 0.8rem; opacity: 0.6; }
 
+.logo-footer { 
+    height: 200px;      /* Aumentado de 40px a 80px para mayor visibilidad */
+    width: auto;
+    margin-bottom: 20px; 
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.logo-footer:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el mouse */
+}
+
 /* ================== 11. BOTÓN WHATSAPP ================== */
 .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: 0.3s; }
 .whatsapp-icon { width: 65px; height: auto; }
 
 /* ================== 12. ADAPTACIÓN PARA MÓVILES ================== */
+/* ================== 12. ADAPTACIÓN PARA MÓVILES (OPTIMIZADA) ================== */
 @media (max-width: 768px) { 
-    body::before { background-image: url('./Assets/mob7.jpeg'); background-size: cover; height: 100vh; position: fixed; }
-    .hero-section { padding: 120px 5% 40px !important; text-align: center !important; }
-    .hero-content h1 { font-size: 2.1rem !important; }
-    .section-title { font-size: 2.1rem !important; margin-bottom: 30px; }
-    .carousel-track { flex-direction: column !important; align-items: center !important; }
-    .card { min-width: 100% !important; min-height: 160px !important; padding: 20px !important; }
-    .chevron-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
-    .chevron-item { clip-path: none !important; margin-left: 0 !important; height: 110px !important; border-radius: 15px !important; }
-    .footer-container { flex-direction: column !important; text-align: center !important; }
+    /* 1. Fondo fijo para evitar saltos al hacer scroll */
+    body::before { 
+        background-image: url('./Assets/mob7.jpeg'); 
+        background-size: cover; 
+        height: 100vh; 
+        position: fixed; 
+    }
+
+    /* 2. Ajuste de Títulos: Más pequeños para que no se corten */
+    .hero-content h1, .section-title { 
+        font-size: 2rem !important; 
+        margin-bottom: 20px; 
+        text-align: center !important;
+    }
+
+    /* 3. Forzar centrado de textos en todas las secciones Hero */
+    .hero-section { 
+        padding: 80px 5% 40px !important; 
+        justify-content: center !important; 
+        text-align: center !important; 
+    }
+    
+    .hero-content p, #inicio-2 .hero-content p { 
+        text-align: center !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        font-size: 1rem !important;
+    }
+
+    /* 4. OPTIMIZACIÓN DE BOTONES CTA EN MÓVIL */
+    .btn-cta, .btn-cta-neon { 
+        padding: 12px 25px !important; /* Reducimos padding lateral de 45px a 25px */
+        font-size: 0.9rem !important;   /* Fuente un poco más pequeña */
+        width: auto !important;         /* Que el ancho dependa del texto */
+        min-width: 200px;               /* Pero con un mínimo para que se vea importante */
+        max-width: 90%;                /* Evita que toque los bordes de la pantalla */
+        display: table !important;      /* Centra el botón como bloque pero mantiene forma de cápsula */
+        margin: 20px auto !important;   /* Centrado automático horizontal */
+        white-space: normal !important; /* Permite que el texto baje si es muy largo */
+        line-height: 1.2;
+    }
+
+    /* 5. Contenedores de botones: Forzar centrado */
+    .cta-container-centro, .cta-container-derecha { 
+        display: flex !important;
+        justify-content: center !important; 
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    /* 6. Ajuste de Carrusel (Tarjetas) */
+    .carousel-track { 
+        flex-direction: column !important; 
+        align-items: center !important; 
+    }
+    .card { 
+        min-width: 100% !important; 
+        min-height: 140px !important; 
+        padding: 25px !important; 
+    }
+    .stat-highlight { font-size: 3.5rem !important; }
+
+    /* 7. Ajuste de Flechas (Chevrons) a Grilla */
+    .chevron-container { 
+        display: grid !important; 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 10px !important; 
+    }
+    .chevron-item { 
+        clip-path: none !important; 
+        margin-left: 0 !important; 
+        height: auto !important; 
+        padding: 15px 5px !important;
+        border-radius: 12px !important; 
+    }
+
+    /* 8. Footer */
+    .footer-container { 
+        flex-direction: column !important; 
+        text-align: center !important; 
+        align-items: center !important;
+    }
 }
