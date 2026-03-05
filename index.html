@@ -5,67 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAON | Automatización</title>
 
-     <!-- 1. BOOTSTRAP CSS (CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- 1. BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 2. CALENDLY CSS (NUEVO) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <!-- 3. FUENTES Y ESTILOS -->
     <link rel="icon" href="./Assets/maon_letra_logo.png" type="image/png">
-    <!-- IMPORTACIÓN DE FUENTE POPPINS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- ================== 1. CABECERA Y NAVEGACIÓN ================== -->
-   <!-- ================== 1. CABECERA Y NAVEGACIÓN (RESPONSIVE) ================== -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top maon-navbar">
-    <div class="container-fluid px-4">
-        <!-- Logo -->
-        <a class="navbar-brand logo-btn" href="#inicio-1">
-            <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-img">
-        </a>
-
-        <!-- Botón Hamburguesa -->
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Contenedor de Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-lg-4 text-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-light" href="#caracteristicas">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-light" href="#inicio-2">¿Qué hacemos?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-light" href="#como-lo-hacemos">¿Cómo lo hacemos?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fw-light" href="#registro">Contacto</a>
-                </li>
-            </ul>
+    <!-- ================== 1. NAVEGACIÓN (RESPONSIVE) ================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top maon-navbar">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand logo-btn" href="#inicio-1">
+                <img src="./Assets/maon_letra_logo.png" alt="MAON Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link text-white fw-light" href="#caracteristicas">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-light" href="#inicio-2">¿Qué hacemos?</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-light" href="#como-lo-hacemos">¿Cómo lo hacemos?</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-light" href="#registro">Contacto</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main>
-        <!-- ================== 2. PRIMERA SECCIÓN HERO ================== -->
+        <!-- ================== 2. SECCIÓN HERO 1 ================== -->
         <section id="inicio-1" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
                     <h1>Agiliza tus procesos con menos carga operacional, mayor control y mayores ganancias.</h1>
-                    <!-- Antes: <a href="#registro" class="btn-cta">Empezar Ahora</a> -->
-<a href="#" class="btn-cta" data-bs-toggle="modal" data-bs-target="#quizModal">Empezar Ahora</a> 
+                    <a href="#" class="btn-cta" data-bs-toggle="modal" data-bs-target="#quizModal">Empezar Ahora</a> 
                 </div>
             </div>
         </section>
 
-        <!-- ================== 3. BANNER DE DATOS IA ================== -->
+        <!-- ================== 3. BANNER ESTADÍSTICA ================== -->
         <section class="banner-estadistica">
             <p>El 85% de los dueños de negocios que usan IA reportan un incremento notable en su eficiencia operativa.</p>
         </section>
 
-        <!-- ================== 4. SECCIÓN CARRUSEL (BENEFICIOS) ================== -->
+        <!-- ================== 4. CARRUSEL BENEFICIOS ================== -->
         <section id="caracteristicas">
             <div class="carousel-window">
                 <div class="carousel-container">
@@ -83,347 +72,178 @@
                 </div>
             </div>
             <div class="cta-container-centro">
-                <!-- Mensaje específico: "Hola, quiero la auditoría gratuita de automatización" -->
-                <a href="https://wa.me/573504032222?text=Hola%20MAON,%20vengo%20desde%20la%20web.%20Quiero%20mi%20auditor%C3%ADa%20de%20automatizaci%C3%B3n%20gratuita." 
-                target="_blank" 
-                class="btn-cta-neon">
-                Solicitar Auditoría Gratis
-                </a>
+                <a href="https://wa.me/573504032222?text=Hola%20MAON,%20vengo%20desde%20la%20web.%20Quiero%20mi%20auditor%C3%ADa%20de%20automatizaci%C3%B3n%20gratuita." target="_blank" class="btn-cta-neon">Solicitar Auditoría Gratis</a>
             </div>
         </section>
 
-        <!-- ================== 5. SEGUNDA SECCIÓN HERO (¿QUÉ HACEMOS?) ================== -->
+        <!-- ================== 5. SECCIÓN ¿QUÉ HACEMOS? ================== -->
         <section id="inicio-2" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
                     <h1>¿Qué hacemos?</h1>
-                    <p>
-                        En MAON convertimos el <strong>caos de mensajes, seguimientos y ventas manuales</strong> en un sistema que trabaja por tu negocio <strong>24/7</strong>. 
-                        Diseñamos estrategias, entrenamos nuestra IA para que hable con el <strong>ADN de tu marca</strong> y automatizamos tu atención al cliente, tu agenda y tu proceso comercial completo, <strong>sin que pierdas la esencia humana.</strong>
-                    </p>
-                    <p class="resultado-texto">
-                        El resultado: <span>Menos carga operativa, respuestas inmediatas y más clientes comprando o agendando, incluso cuando no estás conectado.</span>
-                    </p>
+                    <p>En MAON convertimos el <strong>caos de mensajes, seguimientos y ventas manuales</strong> en un sistema que trabaja por tu negocio <strong>24/7</strong>. Diseñamos estrategias, entrenamos nuestra IA para que hable con el <strong>ADN de tu marca</strong> y automatizamos tu atención al cliente, tu agenda y tu proceso comercial completo.</p>
+                    <p class="resultado-texto">El resultado: <span>Menos carga operativa, respuestas inmediatas y más clientes comprando o agendando.</span></p>
                     <div class="cta-container-derecha">
-                        <!-- Reemplazamos el enlace por la API de WhatsApp -->
-                        <a href="https://wa.me/573504032222?text=Quiero%20automatizar%20mi%20negocio" 
-                        target="_blank" 
-                        class="btn-cta-neon">
-                        Quiero automatizar mi negocio
-                        </a>
+                        <a href="https://wa.me/573504032222?text=Quiero%20automatizar%20mi%20negocio" target="_blank" class="btn-cta-neon">Quiero automatizar mi negocio</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================== 6. SECCIÓN DE PROCESO (¿CÓMO LO HACEMOS?) ================== -->
+        <!-- ================== 6. SECCIÓN PROCESO ================== -->
         <section id="como-lo-hacemos" class="process-section">
             <h1 class="section-title">¿Cómo lo hacemos?</h1>
-            
             <div class="chevron-container">
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Atraemos</span>
-                        <span class="step-desc">Llevamos tu marca a personas con interés real.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Filtramos</span>
-                        <span class="step-desc">Nuestra IA califica y segmenta prospectos ideales.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Seguimiento</span>
-                        <span class="step-desc">Acompañamos al prospecto hasta la decisión.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Conversión</span>
-                        <span class="step-desc">Se realiza la compra o agendamiento en agenda.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Base de datos</span>
-                        <span class="step-desc">Leads organizados para futuras acciones.</span>
-                    </div>
-                </div>
-                <div class="chevron-item">
-                    <div class="content">
-                        <span class="step-title">Re-impacto</span>
-                        <span class="step-desc">Promociones específicas y recordatorios.</span>
-                    </div>
-                </div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Atraemos</span><span class="step-desc">Llevamos tu marca a personas con interés real.</span></div></div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Filtramos</span><span class="step-desc">Nuestra IA califica prospectos ideales.</span></div></div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Seguimiento</span><span class="step-desc">Acompañamos al prospecto hasta la decisión.</span></div></div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Conversión</span><span class="step-desc">Se realiza la compra o agendamiento en agenda.</span></div></div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Base de datos</span><span class="step-desc">Leads organizados para futuras acciones.</span></div></div>
+                <div class="chevron-item"><div class="content"><span class="step-title">Re-impacto</span><span class="step-desc">Promociones específicas y recordatorios.</span></div></div>
             </div>
-
             <div class="cta-container-centro">
-                <a href="#registro" class="btn-cta-neon">Activa tu sistema de ventas</a>
+                <!-- ACCIÓN CALENDLY CONFIGURADA -->
+                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/TU_USUARIO/REUNION'});return false;" class="btn-cta-neon">Activa tu sistema de ventas</a>
             </div>
         </section>
 
-             <!-- ================== 7. PARA QUIEN ES MAON  ================== -->
+        <!-- ================== 7. SECCIÓN PARA QUIÉN ES MAON ================== -->
         <section id="para-quien-es-maon" class="process-section">
             <h1 class="section-title">Para quién es MAON</h1>
             
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    E-commerce
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                    <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    Servicios digitales
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-             <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    Marcas personales/ Workshop / Talleres
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Negocios con alto volumen de mensajes.
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Empresas B2B 
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-             <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Retail 
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-            
-             <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    Empresas que ya venden, pero quieren vender más y mejor
-                </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-
-              <!-- NUEVO BOTÓN CTA -->
-           |  <!-- El Botón -->
-<div class="cta-container-centro" style="margin-top: 50px;">
-    <a href="#" class="btn-cta-neon" data-bs-toggle="modal" data-bs-target="#demoSelectorModal">
-        Probar IA para mi sector
-    </a>
-</div>
-
-<!-- MODAL SELECTOR DE DEMOS -->
-<div class="modal fade" id="demoSelectorModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content quiz-card">
-            <div class="modal-header border-0">
-                <h5 class="modal-title">Selecciona tu industria para iniciar la simulación</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4">
-                <div class="row g-3">
-                    <!-- Opción E-commerce -->
-                    <div class="col-md-4">
-                        <div class="industry-card" onclick="startIndustryDemo('E-commerce')">
-                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(150deg);">
-                            <h6>E-commerce</h6>
-                            <p class="small">Recuperación de carritos y FAQs de envíos.</p>
-                        </div>
-                    </div>
-                    <!-- Opción Agencias/B2B -->
-                    <div class="col-md-4">
-                        <div class="industry-card" onclick="startIndustryDemo('B2B')">
-                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(200deg);">
-                            <h6>Servicios / B2B</h6>
-                            <p class="small">Calificación de leads y agendamiento de citas.</p>
-                        </div>
-                    </div>
-                    <!-- Opción Retail/Tienda -->
-                    <div class="col-md-4">
-                        <div class="industry-card" onclick="startIndustryDemo('Retail')">
-                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(280deg);">
-                            <h6>Retail / Tiendas</h6>
-                            <p class="small">Atención 24/7 y promociones geolocalizadas.</p>
-                        </div>
+            <div class="accordion" id="accordionMaon">
+                
+                <!-- Item 1 eccomerce -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">E-commerce</button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong>E-commerce:</strong>  Automatizamos la atención, le hacemos seguimiento a tus pedidos, hacemos recuperación de carritos y campañas para convertir más visitas en ventas. </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <!-- Item 2 Servicios digitales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">Servicios digitales</button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong>Servicios digitales:</strong> Respondemos a tus leads de forma inmediata, agendamos citas automáticamente y le hacemos seguimiento a los prospectos hasta convertirlos en clientes. </div>
+                    </div>
+                </div>
+                <!-- Item 3 Marcas Personales -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">Marcas Personales</button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong>Marcas personales/Workshop:</strong>  Automatizamos las inscripciones, los recordatorios, los pagos y el seguimiento para llenar cada evento sin que gestiones los mensajes manualmente. </div>
+                    </div>
+                </div>
 
+                <!-- Item 4 Alto volumen de mensajes  -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">Alto Volumen</button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong>Alto volumen de mensajes:</strong>  Nuestro sistema responde cientos de mensajes al instante, filtra clientes potenciales y evita perder ventas por falta de tiempo o de inmediatez. </div>
+                    </div>
+                </div>
+
+                 <!-- Item 5 Empresas B2B -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">Empresas B2B</button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong> Empresas B2B: </strong> Calificamos tus prospectos, automatizamos seguimientos comerciales y organizamos tu pipeline sin perder oportunidades de negocio. </div>
+                    </div>
+                </div>
+
+                 <!-- Item 6 Retail -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">Retail</button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong> Retail </strong> Calificamos tus prospectos, automatizamos seguimientos comerciales y organizamos tu pipeline sin perder oportunidades de negocio. </div>
+                    </div>
+                </div>
+
+                  <!-- Item 7 Empresas que ya venden, pero quieren vender más y mejor -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">Empresas que ya venden, pero quieren vender más y mejor </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionMaon">
+                        <div class="accordion-body"><strong> Empresas que ya venden, pero quieren vender más y mejor: </strong>  Optimizamos tu proceso comercial, automatizamos seguimientos y convertimos más prospectos en ventas reales.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cta-container-centro" style="margin-top: 50px;">
+                <a href="#" class="btn-cta-neon" data-bs-toggle="modal" data-bs-target="#demoSelectorModal">Probar IA para mi sector</a>
             </div>
         </section>
 
-   
-
-        <!-- ================== 7. SECCIÓN DE CONTACTO (REGISTRO) ================== 
+        <!-- ================== 8. SECCIÓN CONTACTO ================== -->
         <section id="registro">
             <div class="form-container-glass">
                 <h2>¿Listo para la transformación?</h2>
                 <form action="https://formspree.io/f/xdalrowr" method="POST">
                     <input type="text" name="Nombre" placeholder="Nombre completo" required>
-                    <input type="email" name="Email" placeholder="Correo electrónico corporativo" required>
+                    <input type="email" name="Email" placeholder="Correo corporativo" required>
                     <button type="submit" class="btn-cta">Enviar Información</button>
                 </form>
             </div>
         </section>
     </main>
 
-    -->
-
-    <!-- ================== 8. PIE DE PÁGINA ================== -->
+    <!-- ================== 9. FOOTER ================== -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <div class="contact-links">
-                    <a href="https://wa.me/573504032222" target="_blank" class="footer-link-item">
-                        <img src="./Assets/logo-whatsapp.png" alt="WhatsApp" class="icon-small">
-                        <span>+57 350 403 2222</span>
-                    </a>
-                    <a href="mailto:equipomaon@gmail.com" target="_blank" class="footer-link-item">
-                        <img src="./Assets/logo-correo.png" alt="Gmail" class="icon-small">
-                        <span>equipomaon@gmail.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/company/maoncrm" target="_blank" class="footer-link-item">
-                        <img src="./Assets/logo_linkedin.png" alt="LinkedIn" class="icon-small">
-                        <span>Maon Automatizaciones</span>
-                    </a>
+                    <a href="https://wa.me/573504032222" target="_blank" class="footer-link-item"><img src="./Assets/logo-whatsapp.png" class="icon-small"><span>+57 350 403 2222</span></a>
+                    <a href="mailto:equipomaon@gmail.com" class="footer-link-item"><img src="./Assets/logo-correo.png" class="icon-small"><span>equipomaon@gmail.com</span></a>
                 </div>
             </div>
             <div class="footer-col footer-logo">
                 <img src="./Assets/perfil_logotipo_blanco.png" alt="MAON Logo" class="logo-footer">
                 <p class="copyright-text">© 2026 MAON. Inteligencia en cada mensaje.</p>
             </div>
-           
         </div>
     </footer>
 
-      <!-- 2. BOOTSTRAP JS (Necesario para que el acordeón funcione) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- ================== MODALES (AL FINAL) ================== -->
 
-    <!-- 3. JS PERSONALIZADO -->
-    <script src="index.js"></script>
-
-    <!-- BOTÓN DE WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/573504032222" class="whatsapp-btn" target="_blank">
-        <img src="./Assets/logo-whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
-    </a>
-
-    <!-- MODAL DEL QUIZ INTERACTIVO -->
+    <!-- Modal Quiz -->
     <div class="modal fade" id="quizModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content quiz-card">
                 <div class="modal-header border-0">
-                    <div class="progress-container w-100">
-                        <div class="progress-bar-fill" id="quizProgress" style="width: 33%;"></div>
-                    </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="progress-container w-100"><div class="progress-bar-fill" id="quizProgress" style="width: 33%;"></div></div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                
                 <div class="modal-body text-center p-4">
-                    <!-- Paso 1 -->
                     <div class="quiz-step active" id="step1">
-                        <h3 class="mb-4">¿Cuántos mensajes o leads recibes al día?</h3>
+                        <h3 class="mb-4">¿Cuántos mensajes recibes al día?</h3>
                         <div class="quiz-options">
                             <button class="opt-btn" onclick="nextStep(2, 20)">Menos de 10</button>
                             <button class="opt-btn" onclick="nextStep(2, 50)">Entre 10 y 50</button>
-                            <button class="opt-btn" onclick="nextStep(2, 90)">Más de 50 (Saturación)</button>
+                            <button class="opt-btn" onclick="nextStep(2, 90)">Más de 50</button>
                         </div>
                     </div>
-
-                    <!-- Paso 2 -->
-                    <div class="quiz-step" id="step2">
-                        <h3 class="mb-4">¿Cuánto tardas en dar la primera respuesta?</h3>
-                        <div class="quiz-options">
-                            <button class="opt-btn" onclick="nextStep(3, 10)">Menos de 5 minutos</button>
-                            <button class="opt-btn" onclick="nextStep(3, 40)">Entre 30 y 60 minutos</button>
-                            <button class="opt-btn" onclick="nextStep(3, 80)">Más de 2 horas</button>
-                        </div>
-                    </div>
-
-                    <!-- Paso 3 -->
-                    <div class="quiz-step" id="step3">
-                        <h3 class="mb-4">¿Cuál es tu mayor cuello de botella?</h3>
-                        <div class="quiz-options">
-                            <button class="opt-btn" onclick="showResult('Agendamiento')">Agendar Citas</button>
-                            <button class="opt-btn" onclick="showResult('FAQ')">Dudas Repetitivas</button>
-                            <button class="opt-btn" onclick="showResult('Seguimiento')">Falta de Seguimiento</button>
-                        </div>
-                    </div>
-
-                    <!-- Resultado Final -->
+                    <!-- Agrega aquí los demás steps del quiz según tu lógica JS -->
                     <div class="quiz-step" id="stepResult">
-                        <div class="result-circle">
-                            <span id="percentNumber">85%</span>
-                            <small>Automatizable</small>
-                        </div>
-                        <h4 class="mt-3">¡Tu negocio tiene un alto potencial!</h4>
-                        <p class="small text-white-50">Hemos detectado que la IA puede optimizar tu área de <span id="areaDetectada" class="text-info">...</span>.</p>
-                        
+                        <div class="result-circle"><span id="percentNumber">85%</span><small>Automatizable</small></div>
                         <form action="https://formspree.io/f/xdalrowr" method="POST" class="mt-4">
                             <input type="hidden" name="Quiz_Resultado" id="quizHiddenInput">
-                            <input type="text" name="Nombre" placeholder="Tu Nombre" class="form-control mb-2 quiz-input" required>
-                            <input type="email" name="Email" placeholder="Correo Corporativo" class="form-control mb-3 quiz-input" required>
+                            <input type="text" name="Nombre" placeholder="Nombre" class="form-control mb-2 quiz-input" required>
+                            <input type="email" name="Email" placeholder="Email" class="form-control mb-3 quiz-input" required>
                             <button type="submit" class="btn-cta-neon w-100">Obtener mi Plan IA</button>
                         </form>
                     </div>
@@ -431,6 +251,57 @@
             </div>
         </div>
     </div>
+
+ 
+   <!-- MODAL SELECTOR DE INDUSTRIAS -->
+    <div class="modal fade" id="demoSelectorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content quiz-card"> <!-- Usa la misma clase que el quiz para consistencia -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Selecciona tu industria para iniciar la simulación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-3">
+                        <!-- Opción E-commerce -->
+                        <div class="col-md-4">
+                            <div class="industry-card" onclick="startIndustryDemo('E-commerce')">
+                                <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(150deg);">
+                                <h6>E-commerce</h6>
+                                <p>Recuperación de carritos y FAQs de envíos.</p>
+                            </div>
+                        </div>
+                        <!-- Opción Agencias/B2B -->
+                        <div class="col-md-4">
+                            <div class="industry-card" onclick="startIndustryDemo('B2B')">
+                                <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(200deg);">
+                                <h6>Servicios / B2B</h6>
+                                <p>Calificación de leads y agendamiento de citas.</p>
+                            </div>
+                        </div>
+                        <!-- Opción Retail/Tienda -->
+                        <div class="col-md-4">
+                            <div class="industry-card" onclick="startIndustryDemo('Retail')">
+                                <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(280deg);">
+                                <h6>Retail / Tiendas</h6>
+                                <p>Atención 24/7 y promociones geolocalizadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="index.js"></script>
+
+    <!-- Botón Whatsapp Flotante -->
+    <a href="https://wa.me/573504032222" class="whatsapp-btn" target="_blank">
+        <img src="./Assets/logo-whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
 </body>
 </html>
