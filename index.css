@@ -65,7 +65,7 @@ body::before {
 .navbar-toggler-icon { filter: brightness(0) invert(1); } /* Hace el icono blanco */
 
 
-/* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
+
 /* ================== 4. SECCIONES HERO (AJUSTE ¿QUÉ HACEMOS?) ================== */
 .hero-section { 
     width: 100%; 
@@ -76,7 +76,7 @@ body::before {
     background: transparent !important; 
 }
 
-.hero-content { max-width: 800px; width: 100%; }
+.hero-content { max-width: 400px; width: 100%; }
 
 
 
@@ -136,26 +136,34 @@ body::before {
 
 
 /* ================== 5. BOTONES (CÁPSULA LILA) ================== */
+/* ================== 5. BOTONES (CÁPSULA REFINADA) ================== */
 .btn-cta, .btn-cta-neon { 
     background-color: var(--accent-lilac); 
     color: #000000; 
     text-decoration: none; 
-    font-size: 1.2rem; 
-    font-weight: 700; 
-    padding: 16px 45px; 
+    
+    /* REDUCCIÓN DE TAMAÑO */
+    font-size: 0.85rem;      /* Antes era 1.2rem - Ahora es más técnico */
+    padding: 10px 25px;      /* Antes era 16px 45px - Mucho más estilizado */
+    
+    font-weight: 600; 
     border-radius: 50px; 
     text-transform: uppercase; 
+    letter-spacing: 1px;     /* Un poco de espacio entre letras para legibilidad */
+    display: inline-block;
+    white-space: nowrap;     /* Fuerza a que el texto esté en una sola línea */
+    
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     border: 2px solid var(--accent-lilac);
-    box-shadow: 0 10px 30px rgba(178, 170, 238, 0.3);
-    display: inline-block;
+    box-shadow: 0 8px 20px rgba(178, 170, 238, 0.2);
     cursor: pointer;
 }
+
 .btn-cta:hover, .btn-cta-neon:hover { 
     background: transparent; 
     color: var(--accent-lilac); 
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 40px rgba(178, 170, 238, 0.5); 
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 30px rgba(178, 170, 238, 0.4); 
 }
 
 /* ================== 6. BANNER Y CARRUSEL ================== */
@@ -429,16 +437,10 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     }
 
     /* 4. OPTIMIZACIÓN DE BOTONES CTA EN MÓVIL */
-    .btn-cta, .btn-cta-neon { 
-        padding: 12px 25px !important; /* Reducimos padding lateral de 45px a 25px */
-        font-size: 0.9rem !important;   /* Fuente un poco más pequeña */
-        width: auto !important;         /* Que el ancho dependa del texto */
-        min-width: 200px;               /* Pero con un mínimo para que se vea importante */
-        max-width: 90%;                /* Evita que toque los bordes de la pantalla */
-        display: table !important;      /* Centra el botón como bloque pero mantiene forma de cápsula */
-        margin: 20px auto !important;   /* Centrado automático horizontal */
-        white-space: normal !important; /* Permite que el texto baje si es muy largo */
-        line-height: 1.2;
+    btn-cta, .btn-cta-neon { 
+        font-size: 0.8rem !important; 
+        padding: 10px 20px !important;
+        min-width: auto !important; /* Quita el ancho mínimo para que sea compacto */
     }
 
     /* 5. Contenedores de botones: Forzar centrado */
