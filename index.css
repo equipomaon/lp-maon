@@ -314,6 +314,54 @@ footer { background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); padding: 8
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* ================== 13. ESTILOS DEL SIMULADOR DE INDUSTRIAS ================== */
+.industry-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.industry-card:hover {
+    background: rgba(178, 170, 238, 0.15);
+    border-color: var(--accent-lilac);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(178, 170, 238, 0.2);
+}
+
+.industry-card h6 {
+    color: var(--accent-lilac);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.industry-card p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Ajuste para que las imágenes dentro de las cards no se deformen */
+.industry-card img {
+    transition: 0.3s;
+}
+
+.industry-card:hover img {
+    transform: scale(1.1);
+}
+
 
 
 /* ================== 12. ADAPTACIÓN PARA MÓVILES (OPTIMIZADA) ================== */

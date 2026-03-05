@@ -83,7 +83,12 @@
                 </div>
             </div>
             <div class="cta-container-centro">
-                <a href="#registro" class="btn-cta-neon">Empieza a vender 24/7</a>
+                <!-- Mensaje específico: "Hola, quiero la auditoría gratuita de automatización" -->
+                <a href="https://wa.me/573504032222?text=Hola%20MAON,%20vengo%20desde%20la%20web.%20Quiero%20mi%20auditor%C3%ADa%20de%20automatizaci%C3%B3n%20gratuita." 
+                target="_blank" 
+                class="btn-cta-neon">
+                Solicitar Auditoría Gratis
+                </a>
             </div>
         </section>
 
@@ -100,13 +105,13 @@
                         El resultado: <span>Menos carga operativa, respuestas inmediatas y más clientes comprando o agendando, incluso cuando no estás conectado.</span>
                     </p>
                     <div class="cta-container-derecha">
-    <!-- Reemplazamos el enlace por la API de WhatsApp -->
-    <a href="https://wa.me/573504032222?text=Quiero%20automatizar%20mi%20negocio" 
-       target="_blank" 
-       class="btn-cta-neon">
-       Quiero automatizar mi negocio
-    </a>
-</div>
+                        <!-- Reemplazamos el enlace por la API de WhatsApp -->
+                        <a href="https://wa.me/573504032222?text=Quiero%20automatizar%20mi%20negocio" 
+                        target="_blank" 
+                        class="btn-cta-neon">
+                        Quiero automatizar mi negocio
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -258,9 +263,52 @@
             </div>
 
               <!-- NUEVO BOTÓN CTA -->
-            <div class="cta-container-centro" style="margin-top: 50px; margin-bottom: 30px;">
-                <a href="#registro" class="btn-cta-neon">Activa tu sistema de ventas</a>
+           |  <!-- El Botón -->
+<div class="cta-container-centro" style="margin-top: 50px;">
+    <a href="#" class="btn-cta-neon" data-bs-toggle="modal" data-bs-target="#demoSelectorModal">
+        Probar IA para mi sector
+    </a>
+</div>
+
+<!-- MODAL SELECTOR DE DEMOS -->
+<div class="modal fade" id="demoSelectorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content quiz-card">
+            <div class="modal-header border-0">
+                <h5 class="modal-title">Selecciona tu industria para iniciar la simulación</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body p-4">
+                <div class="row g-3">
+                    <!-- Opción E-commerce -->
+                    <div class="col-md-4">
+                        <div class="industry-card" onclick="startIndustryDemo('E-commerce')">
+                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(150deg);">
+                            <h6>E-commerce</h6>
+                            <p class="small">Recuperación de carritos y FAQs de envíos.</p>
+                        </div>
+                    </div>
+                    <!-- Opción Agencias/B2B -->
+                    <div class="col-md-4">
+                        <div class="industry-card" onclick="startIndustryDemo('B2B')">
+                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(200deg);">
+                            <h6>Servicios / B2B</h6>
+                            <p class="small">Calificación de leads y agendamiento de citas.</p>
+                        </div>
+                    </div>
+                    <!-- Opción Retail/Tienda -->
+                    <div class="col-md-4">
+                        <div class="industry-card" onclick="startIndustryDemo('Retail')">
+                            <img src="./Assets/logo-whatsapp.png" alt="Demo" class="mb-3" style="width: 40px; filter: hue-rotate(280deg);">
+                            <h6>Retail / Tiendas</h6>
+                            <p class="small">Atención 24/7 y promociones geolocalizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
             </div>
         </section>

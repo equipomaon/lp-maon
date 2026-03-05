@@ -124,3 +124,19 @@ function showResult(area) {
         hiddenInput.value = `Potencial: ${finalPercent}%, Área de interés: ${area}`;
     }
 }
+
+// ================== 8. LÓGICA DE INICIO DE DEMO POR INDUSTRIA ==================
+function startIndustryDemo(industry) {
+    let mensaje = "";
+    
+    if(industry === 'E-commerce') {
+        mensaje = "Hola MAON! Quiero simular el bot para mi E-commerce. Activar protocolo: DEMO_ECOMM";
+    } else if(industry === 'B2B') {
+        mensaje = "Hola MAON! Quiero ver cómo la IA califica mis leads B2B. Activar protocolo: DEMO_B2B";
+    } else {
+        mensaje = "Hola MAON! Quiero probar el bot de atención para Retail. Activar protocolo: DEMO_RETAIL";
+    }
+
+    const url = `https://wa.me/573504032222?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
