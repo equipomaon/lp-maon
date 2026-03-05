@@ -69,3 +69,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// ================== 7. LÓGICA DEL QUIZ INTERACTIVO ==================
+let score = 0; // Variable global para seguir el puntaje
+
+// Función para avanzar entre preguntas
+function nextStep(step, points) {
+    score += points;
+    
+    // 1. Actualizar la barra de progreso visual
+    // Calculamos el progreso basado en 3 pasos totales
+    const progress = (step / 3) * 100;
+    const progressBar = document.getElementById('quizProgress');
+    if (progressBar) {
+        progressBar.style.width = progress + '%';
+    }
+    
+    // 2. Cambiar la visibilidad de los pasos
+    // Ocultamos todos los pasos y mostramos solo el actual
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+    const nextStepEl = document.getElementById('step' + step);
+    if (nextStepEl) {
+        nextStepEl.classList.add('active');
+    }
+}
+
+// Función para mostrar el resultado final y preparar el formulario
+function showResult(area) {
+    // 1. Ocultar preguntas y mostrar pantalla de resultados
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+    const resultStep = document.getElementById('stepResult');
+    if (resultStep) {
+        resultStep.classList.add('active');
+    }
+    
+    // 2. Completar la barra de progreso al 100%
+    const progressBar = document.getElementById('quizProgress');
+    if (progressBar) {
+        progressBar.style.width = '100%';
+    }
+    
+    // 3. Calcular el porcentaje de automatización
+    // Sumamos un margen base y limitamos a 97% para realismo
+    let finalPercent = Math.min(score + 15, 97);
+    
+    // 4. Inyectar los datos en el HTML del Modal
+    document.getElementById('percentNumber').innerText = finalPercent + '%';
+    document.getElementById('areaDetectada').innerText = area;
+    
+    // 5. Guardar el resultado en el campo oculto del formulario
+    // Esto es lo que te llegará a tu correo de Formspree
+    const hiddenInput = document.getElementById('quizHiddenInput');
+    if (hiddenInput) {
+        hiddenInput.value = `Potencial: ${finalPercent}%, Área de interés: ${area}`;
+    }
+}
