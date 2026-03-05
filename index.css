@@ -78,6 +78,8 @@ body::before {
 
 .hero-content { max-width: 800px; width: 100%; }
 
+
+
 /* Alineación para la sección de Inicio 1 (Izquierda) */
 #inicio-1 { justify-content: flex-start; text-align: left; }
 
@@ -120,12 +122,14 @@ body::before {
 
 /* Título de la sección Hero */
 .hero-content h1 { 
-    font-size: clamp(2.5rem, 6vw, 4.2rem); 
-    font-weight: 600; 
+    font-size: clamp(1.8rem, 4vw, 2.8rem); 
+    font-weight: 200; 
     text-shadow: 0 4px 20px rgba(0,0,0,0.8); 
     line-height: 1.1; 
     margin-bottom: 25px; 
 }
+
+
 
 /* ================== 5. BOTONES (CÁPSULA LILA) ================== */
 .btn-cta, .btn-cta-neon { 
