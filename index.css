@@ -343,6 +343,10 @@ body::before{
 
 }
 
+.cta-container-centro{
+    text-align:center;
+}
+
 .btn-cta:hover,
 .btn-cta-neon:hover{
 
@@ -389,6 +393,15 @@ body::before{
 #caracteristicas{
 
     padding:100px 0;
+
+}
+.card p{
+
+    font-size:var(--text-base);
+
+    line-height:1.6;
+
+    color:var(--color-white);
 
 }
 
@@ -493,6 +506,54 @@ body::before{
 
 }
 
+.accordion{
+    background-color: var(--color-bg-dark);
+}
+
+.accordion-item{
+    background:var(--glass-bg);
+    backdrop-filter:var(--blur-soft);
+    border:1px solid var(--glass-border);
+}
+
+.accordion-button{
+    background:transparent;
+    color:var(--color-white);
+}
+
+.accordion-button:not(.collapsed){
+    background:transparent;
+    color:var(--color-accent);
+    box-shadow:none;
+}
+
+.accordion-body{
+    background:transparent;
+    color:var(--color-white);
+}
+
+/* ===== 9.1 ACORDEON MAON ===== */
+
+.accordion-item{
+    background:var(--color-bg-dark);
+    border:1px solid var(--glass-border);
+}
+
+.accordion-button{
+    background:var(--color-bg-dark);
+    color:var(--color-white);
+}
+
+.accordion-button:not(.collapsed){
+    background:var(--color-bg-dark);
+    color:var(--color-accent);
+    box-shadow:none;
+}
+
+.accordion-body{
+    background:var(--color-bg-dark);
+    color:var(--color-white);
+}
 
 /* =========================================================
 10. FORMULARIO
@@ -568,7 +629,7 @@ input:focus{
 
 
 /* =========================================================
-11. FOOTER
+11. FOOTER PROFESIONAL
 ========================================================= */
 
 footer{
@@ -577,19 +638,21 @@ footer{
 
     backdrop-filter:var(--blur-medium);
 
-    padding:80px var(--container-padding) 40px;
+    padding:100px var(--container-padding) 40px;
 
     border-top:1px solid var(--glass-border);
 
 }
 
+/* CONTENEDOR PRINCIPAL */
+
 .footer-container{
 
-    display:flex;
+    display:grid;
 
-    justify-content:space-between;
+    grid-template-columns:2fr 1fr 1fr 1fr;
 
-    gap:40px;
+    gap:60px;
 
     max-width:1300px;
 
@@ -597,29 +660,43 @@ footer{
 
 }
 
+/* COLUMNAS */
+
+.footer-col{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* TITULOS */
+
 .footer-col h3{
 
     color:var(--color-accent);
 
-    font-size:1.1rem;
+    font-size:1rem;
 
-    margin-bottom:25px;
+    font-weight:var(--fw-bold);
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
 
 }
 
+/* LINKS */
+
 .footer-link-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
 
     text-decoration:none;
 
-    color:var(--color-white);
+    color:var(--white-70);
 
-    margin-bottom:15px;
+    margin-bottom:12px;
 
     font-size:0.9rem;
 
@@ -630,6 +707,58 @@ footer{
 .footer-link-item:hover{
 
     color:var(--color-accent);
+
+    transform:translateX(4px);
+
+}
+
+/* MARCA */
+
+.footer-brand{
+
+    max-width:320px;
+
+}
+
+.logo-footer{
+
+    height:70px;
+
+    width:auto;
+
+    margin-bottom:20px;
+
+}
+
+.footer-desc{
+
+    font-size:0.9rem;
+
+    line-height:1.6;
+
+    color:var(--white-70);
+
+}
+
+/* BARRA INFERIOR */
+
+.footer-bottom{
+
+    border-top:1px solid var(--white-10);
+
+    margin-top:60px;
+
+    padding-top:20px;
+
+    text-align:center;
+
+}
+
+.copyright-text{
+
+    font-size:0.8rem;
+
+    color:var(--white-70);
 
 }
 
