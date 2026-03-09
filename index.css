@@ -86,7 +86,7 @@ body::before {
 /* --- CONFIGURACIÓN ESPECÍFICA ¿QUÉ HACEMOS? (INICIO-2) --- */
 #inicio-2 { 
     justify-content: flex-end; 
-    text-align: right; 
+    
 }
 
 /* Aplicamos el tamaño 1.4rem (igual al banner) a todo el bloque */
@@ -96,7 +96,7 @@ body::before {
 #inicio-2 .resultado-texto span { 
     font-size: 1.4rem !important; /* IGUAL AL BANNER ESTADÍSTICO */
     color: #ffffff !important;    /* TODO EN BLANCO */
-    text-align: right; 
+    
     line-height: 1.7;             /* Espaciado para legibilidad */
 }
 
