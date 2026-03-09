@@ -627,6 +627,85 @@ input:focus{
 
 }
 
+/* ================== PROCESO CHEVRONS ================== */
+
+.chevron-container{
+display:flex;
+width:100%;
+max-width:1400px;
+margin:auto;
+}
+
+.chevron-item{
+flex:1;
+height:180px;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(10px);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+transition:0.3s;
+border-left:1px solid var(--border-glass);
+}
+
+/* forma de flecha */
+
+.chevron-item{
+clip-path:polygon(
+0% 0%,
+92% 0%,
+100% 50%,
+92% 100%,
+0% 100%,
+8% 50%
+);
+margin-left:-3%;
+}
+
+/* primer bloque */
+
+.chevron-item:first-child{
+margin-left:0;
+clip-path:polygon(
+0% 0%,
+92% 0%,
+100% 50%,
+92% 100%,
+0% 100%
+);
+}
+
+/* contenido */
+
+.chevron-item .content{
+text-align:center;
+padding:0 15% 0 20%;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.step-title{
+font-size:1rem;
+font-weight:700;
+color:var(--accent-lilac);
+text-transform:uppercase;
+}
+
+.step-desc{
+font-size:0.8rem;
+color:white;
+opacity:0.9;
+}
+
+/* hover */
+
+.chevron-item:hover{
+background:rgba(178,170,238,0.12);
+transform:translateY(-4px);
+z-index:5;
+}
 
 /* =========================================================
 11. FOOTER PROFESIONAL
