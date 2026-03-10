@@ -805,7 +805,7 @@ height:20px;
 object-fit:contain;
 flex-shrink:0;
 
-border: 1px solid red;
+
 
 }
 
@@ -945,32 +945,32 @@ color:var(--accent-lilac);
    
     .footer-container{
 
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:30px;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:30px;
 
     }
 
     .footer-col{
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
 
     }
 
     .footer-link-item{
 
-    justify-content:center;
+        justify-content:center;
 
     }
 
     .chevron-container{
-    display:grid !important;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    width:100%;
+        display:grid !important;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        width:100%;
     }
 
 /* convertimos las flechas en tarjetas */
