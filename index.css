@@ -247,9 +247,11 @@ body::before{
 
 .hero-content{
 
-    max-width:400px;
+    max-width:800px;
 
     width:100%;
+
+   /*  border: 1px solid red; */
 
 }
 
@@ -310,6 +312,12 @@ body::before{
 
     font-style:italic;
 
+}
+
+.cta-container-derecha{
+    display:flex;
+
+    justify-content:center;
 }
 
 /*
