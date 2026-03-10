@@ -1011,6 +1011,26 @@ color:var(--accent-lilac);
 
     }
 
+    /* 5. SECCIÓN ¿QUÉ HACEMOS? */
+    .hero-content{
+        /* border: 1px solid red; */
+        
+
+        padding: 0 10%; /* Da aire a los costados */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.6; /* IMPORTANTE: Da espacio entre líneas para que sea fácil de leer */
+        color: rgba(255, 255, 255, 0.85); /* Un blanco suavizado */
+        margin-bottom: 30px;
+        font-weight: 300; /* Más delgado para contrastar con el título */
+}
+
    
     /* FOOTER */
     .footer-container{
