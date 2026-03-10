@@ -803,6 +803,9 @@ align-items:center;
 gap:12px;
 margin-bottom:12px;
 
+
+border: 1px solid red;
+
 }
 
 .icon-small{
@@ -812,9 +815,11 @@ height:20px;
 object-fit:contain;
 flex-shrink:0;
 
+border: 1px solid red;
+
 }
 
-.footer-link-item a{
+.footer-link-item a{ 
 
 color:white;
 text-decoration:none;
