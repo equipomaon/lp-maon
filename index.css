@@ -954,17 +954,21 @@ color:var(--accent-lilac);
 
     .footer-col{
 
-        display:flex;
+       display:flex;
         flex-direction:column;
-        align-items:center;
+        align-items:flex-start; /* ← cambia center por flex-start */
+        width:100%;
+        max-width:300px;
 
     }
 
     .footer-link-item{
-
-        justify-content:center;
-
-    }
+        display:flex;
+        align-items:center;
+        justify-content:flex-start; /* ← izquierda a derecha */
+        gap:12px;
+        width:100%;
+}
 
     .chevron-container{
         display:grid !important;
