@@ -796,17 +796,7 @@ footer {
 .footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .logo-footer { height: var(--img_icon); width: auto; margin-bottom: 15px; } /* Corregido de 300px a 60px */
 .footer-bottom { text-align: center; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 0.75rem; opacity: 0.5; }
-.footer-link-item{
-
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:12px;
-
-
-border: 1px solid red;
-
-}
+.footer-link-item{ display:flex; align-items:center; gap:12px; margin-bottom:12px; }
 
 .icon-small{
 
