@@ -83,10 +83,27 @@
 
     /* ===== BOTONES ===== */
     --margin-boton: 10px;
-
+    
     /* ===== imaGENES ===== */
     --img_icon: 200px;
+
+
+    
+    /* ===== VARIABLES IMPLEMENTADAS ===== */
+    
+    /* ICONS */
+    --footer_icon-size :  var(--img_icon);
+
+    /* TAMAÑO TEXTO PRINCIPAL */
+    --text-main-type: var(--font-main);
+    --text-main-base: var(--text-base);
+    --text-main-medium: var(--text-medium);
+    --text-main-hero: var(--text-hero);
+
+
 }
+
+
 
 
 /* =========================================================
@@ -405,15 +422,7 @@ body::before{
     padding:100px 0;
 
 }
-.card p{
 
-    font-size:var(--text-base);
-
-    line-height:1.6;
-
-    color:var(--color-white);
-
-}
 
 .carousel-track{
 
@@ -454,6 +463,23 @@ body::before{
     transition:var(--transition-smooth);
 
 }
+
+.card-content{
+
+    /* font-size:var(--text-base); */
+
+    /* line-height:1.6;
+
+    color:var(--color-white);
+    */
+    color:var(--color-white);
+    font-size:24px;
+    text-align: center;
+    font-weight: var(--fw-light);
+
+}
+
+   
 
 .card.active{
 
@@ -917,7 +943,18 @@ color:var(--accent-lilac);
 
     margin-bottom:60px;
 
-}
+    }
+
+    /* BANNER ESTADISTICA */
+    .card p{
+
+        min-width:100% !important;
+
+        min-height:140px !important;
+
+        padding:25px !important;
+
+    }
     
     /* BOTÓN */
     .btn-cta, 
@@ -931,9 +968,12 @@ color:var(--accent-lilac);
 
     }
 
+/* 4. CARRUSEL BENEFICIOS */
     .carousel-track{
 
         flex-direction:column !important;
+        padding:80px 20px;
+
 
     }
 
@@ -954,6 +994,7 @@ color:var(--accent-lilac);
     }
 
    
+    /* FOOTER */
     .footer-container{
 
         flex-direction:column;
