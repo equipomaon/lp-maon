@@ -890,42 +890,48 @@ footer {
 
     }
 
-.carousel-track{
+    .carousel-track{
 
-    flex-direction:column !important;
+        flex-direction:column !important;
 
-}
+    }
 
-.card{
+    .card{
 
-    min-width:100% !important;
+        min-width:100% !important;
 
-    min-height:140px !important;
+        min-height:140px !important;
 
-    padding:25px !important;
+        padding:25px !important;
 
-}
+    }
 
-.stat-highlight{
+    .stat-highlight{
 
-    font-size:3.5rem !important;
+        font-size:3.5rem !important;
 
-}
+    }
 
-.footer-container{
+    .footer-container{
 
-    flex-direction:column !important;
+         flex-direction:column !important;
+        align-items:center;          /* centra horizontalmente */
+        justify-content:center;
+        text-align:center;           /* centra el texto */
 
-    text-align:center;
+    }
 
-}
+    .footer-col {
+        justify-content: center;
+       
+    }
 
-.chevron-container{
-display:grid !important;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-width:100%;
-}
+    .chevron-container{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    width:100%;
+    }
 
 /* convertimos las flechas en tarjetas */
 
