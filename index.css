@@ -295,6 +295,7 @@ body::before{
 
 }
 
+/*
 .hero-content h1{
 
     font-size:var(--text-hero);
@@ -308,6 +309,7 @@ body::before{
     margin-bottom:25px;
 
 }
+    */
 
 
 /* =========================================================
@@ -879,14 +881,7 @@ color:var(--accent-lilac);
 
     }
 
-    .hero-content h1,
-    .section-title{
-
-        font-size:2rem !important;
-
-        text-align:center !important;
-
-    }
+    
 
     .hero-section{
 
@@ -907,6 +902,22 @@ color:var(--accent-lilac);
         font-size:1rem !important;
 
     }
+
+    .section-title{
+
+    font-size:var(--text-section);
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    text-shadow:0 4px 20px rgba(0,0,0,0.8);
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
     
     /* BOTÓN */
     .btn-cta, 
@@ -983,32 +994,32 @@ color:var(--accent-lilac);
         width:100%;
     }
 
-/* convertimos las flechas en tarjetas */
+    /* convertimos las flechas en tarjetas */
 
-.chevron-item{
-clip-path:none !important;
-margin-left:0 !important;
-height:auto;
-padding:20px 10px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid var(--border-glass);
-}
+    .chevron-item{
+    clip-path:none !important;
+    margin-left:0 !important;
+    height:auto;
+    padding:20px 10px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid var(--border-glass);
+    }
 
-/* contenido más compacto */
+    /* contenido más compacto */
 
-.chevron-item .content{
-padding:0 10px;
-}
+    .chevron-item .content{
+    padding:0 10px;
+    }
 
-.step-title{
-font-size:0.9rem;
-}
+    .step-title{
+    font-size:0.9rem;
+    }
 
-.step-desc{
-font-size:0.75rem;
-line-height:1.4;
-}
+    .step-desc{
+    font-size:0.75rem;
+    line-height:1.4;
+    }
 
 
 
