@@ -272,7 +272,7 @@ body::before{
 #inicio-2 .resultado-texto,
 #inicio-2 .resultado-texto span{
 
-    font-size:var(--text-medium) !important;
+    font-size:var(--text-small) !important;
 
     color:var(--color-white) !important;
 
@@ -989,21 +989,21 @@ color:var(--accent-lilac);
     }
 
     
-.card-content{
+    .card-content{
 
-    /* font-size:var(--text-base); */
+        /* font-size:var(--text-base); */
 
-    /* line-height:1.6;
+        /* line-height:1.6;
 
-    color:var(--color-white);
-    */
-    color:var(--color-white);
-    font-size:24px;
-    text-align: center;
-    font-weight: var(--fw-light);
-  
+        color:var(--color-white);
+        */
+        color:var(--color-white);
+        font-size:24px;
+        text-align: center;
+        font-weight: var(--fw-light);
+    
 
-}
+    }
 
     .stat-highlight{
 
@@ -1014,7 +1014,7 @@ color:var(--accent-lilac);
     /* 5. SECCIÓN ¿QUÉ HACEMOS? */
     .hero-content{
         /* border: 1px solid red; */
-        
+
 
         padding: 0 10%; /* Da aire a los costados */
         text-align: center;
@@ -1023,13 +1023,26 @@ color:var(--accent-lilac);
         align-items: center;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-        line-height: 1.6; /* IMPORTANTE: Da espacio entre líneas para que sea fácil de leer */
-        color: rgba(255, 255, 255, 0.85); /* Un blanco suavizado */
-        margin-bottom: 30px;
-        font-weight: 300; /* Más delgado para contrastar con el título */
-}
+    #inicio-2 .hero-content p,
+        #inicio-2 .hero-content strong,
+        #inicio-2 .resultado-texto,
+        #inicio-2 .resultado-texto span{
+
+            font-size:var(--text-small) !important; 
+
+            color:var(--color-white) !important;
+
+            line-height:1.7;
+
+    }
+
+     #inicio-2 .resultado-texto{
+        margin-top:25px !important;
+     }
+
+     .cta-container-derecha{
+        margin-top: 10px;
+     }
 
    
     /* FOOTER */
