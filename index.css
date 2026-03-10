@@ -966,6 +966,17 @@ color:var(--accent-lilac);
        
     }
 
+    .icon-small{
+
+        width:20px;
+        height:20px;
+        object-fit:contain;
+        flex-shrink:0;
+
+        border: 1px solid rgb(19, 233, 79);
+
+        }
+
     .chevron-container{
     display:grid !important;
     grid-template-columns:repeat(2,1fr);
