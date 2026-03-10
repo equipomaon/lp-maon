@@ -85,7 +85,7 @@
     --margin-boton: 10px;
     
     /* ===== imaGENES ===== */
-    --img_icon: 200px;
+    --img_icon: 100px;
 
 
     
@@ -1084,9 +1084,9 @@ color:var(--accent-lilac);
 }
 
     .footer-logo{
-    align-items:center;
-    text-align:center;
-    width:100%;
+        align-items:center;
+        text-align:center;
+        width:100%;
     }
 
     .chevron-container{
