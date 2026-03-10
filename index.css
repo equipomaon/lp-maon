@@ -476,6 +476,7 @@ body::before{
     font-size:24px;
     text-align: center;
     font-weight: var(--fw-light);
+  
 
 }
 
@@ -986,6 +987,23 @@ color:var(--accent-lilac);
         padding:25px !important;
 
     }
+
+    
+.card-content{
+
+    /* font-size:var(--text-base); */
+
+    /* line-height:1.6;
+
+    color:var(--color-white);
+    */
+    color:var(--color-white);
+    font-size:24px;
+    text-align: center;
+    font-weight: var(--fw-light);
+  
+
+}
 
     .stat-highlight{
 
