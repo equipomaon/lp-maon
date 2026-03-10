@@ -272,7 +272,7 @@ body::before{
 #inicio-2 .resultado-texto,
 #inicio-2 .resultado-texto span{
 
-    font-size:var(--text-medium) !important;
+    font-size:var(--text-medium);
 
     color:var(--color-white) !important;
 
@@ -1027,8 +1027,8 @@ color:var(--accent-lilac);
         #inicio-2 .hero-content strong,
         #inicio-2 .resultado-texto,
         #inicio-2 .resultado-texto span{
-
-            font-size:var(--text-small) !important; 
+ 
+            font-size: 18px;   
 
             color:var(--color-white) !important;
 
