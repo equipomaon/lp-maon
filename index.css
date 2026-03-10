@@ -62,7 +62,7 @@
     --mobile-padding: 5%;
 
     /* ===== BORDES ===== */
-
+    
     --radius-sm: 10px;
     --radius-md: 15px;
     --radius-lg: 20px;
@@ -80,6 +80,9 @@
     --blur-soft: blur(10px);
     --blur-medium: blur(15px);
     --blur-strong: blur(25px);
+
+    /* ===== BOTONES ===== */
+    --margin-boton: 10px;
 }
 
 
@@ -871,55 +874,58 @@ footer{
 
 @media (max-width:768px){
 
-body::before{
+    body::before{
 
-    background-image:url('./Assets/mob7.jpeg');
+        background-image:url('./Assets/mob7.jpeg');
 
-    background-size:cover;
+        background-size:cover;
 
-    height:100vh;
+        height:100vh;
 
-    position:fixed;
+        position:fixed;
 
-}
+    }
 
-.hero-content h1,
-.section-title{
+    .hero-content h1,
+    .section-title{
 
-    font-size:2rem !important;
+        font-size:2rem !important;
 
-    text-align:center !important;
+        text-align:center !important;
 
-}
+    }
 
-.hero-section{
+    .hero-section{
 
-    padding:80px var(--mobile-padding) 40px !important;
+        padding:80px var(--mobile-padding) 40px !important;
 
-    justify-content:center !important;
+        justify-content:center !important;
 
-    text-align:center !important;
+        text-align:center !important;
 
-}
+    }
 
-.hero-content p{
+    .hero-content p{
 
-    text-align:center !important;
+        text-align:center !important;
 
-    margin:auto !important;
+        margin:auto !important;
 
-    font-size:1rem !important;
+        font-size:1rem !important;
 
-}
+    }
+    
+    /* BOTÓN */
+    .btn-cta, 
+    .cta-container-centro,
+    .btn-cta-neon{
 
-.btn-cta,
-.btn-cta-neon{
+        font-size:0.8rem !important;
 
-    font-size:0.8rem !important;
+        padding:10px 20px !important;
+        margin: var(--margin-boton); 
 
-    padding:10px 20px !important;
-
-}
+    }
 
 .carousel-track{
 
@@ -950,5 +956,42 @@ body::before{
     text-align:center;
 
 }
+
+.chevron-container{
+display:grid !important;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+width:100%;
+}
+
+/* convertimos las flechas en tarjetas */
+
+.chevron-item{
+clip-path:none !important;
+margin-left:0 !important;
+height:auto;
+padding:20px 10px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+border:1px solid var(--border-glass);
+}
+
+/* contenido más compacto */
+
+.chevron-item .content{
+padding:0 10px;
+}
+
+.step-title{
+font-size:0.9rem;
+}
+
+.step-desc{
+font-size:0.75rem;
+line-height:1.4;
+}
+
+
+
 
 }
