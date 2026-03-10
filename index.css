@@ -83,6 +83,9 @@
 
     /* ===== BOTONES ===== */
     --margin-boton: 10px;
+
+    /* ===== imaGENES ===== */
+    --img_icon: 200px;
 }
 
 
@@ -791,7 +794,7 @@ footer {
 .footer-col p, .footer-col a { color: var(--white-pure); font-weight: 300; font-size: 0.9rem; text-decoration: none; line-height: 2; }
 .footer-col a:hover { color: var(--accent-lilac); }
 .footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
-.logo-footer { height: 200px; width: auto; margin-bottom: 15px; } /* Corregido de 300px a 60px */
+.logo-footer { height: var(--img_icon); width: auto; margin-bottom: 15px; } /* Corregido de 300px a 60px */
 .footer-bottom { text-align: center; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 0.75rem; opacity: 0.5; }
 
 /* ================== 9. BOTÓN WHATSAPP ================== */
