@@ -772,69 +772,30 @@ footer{
 
 /* LINKS */
 
-.footer-link-item{
 
-    text-decoration:none;
-
-    color:var(--white-70);
-
-    margin-bottom:12px;
-
-    font-size:0.9rem;
-
-    transition:var(--transition-normal);
-
-}
-
-.footer-link-item:hover{
-
-    color:var(--color-accent);
-
-    transform:translateX(4px);
-
-}
 
 /* MARCA */
 
-.footer-brand{
-
-    max-width:320px;
-
+footer { 
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(15px);
+    padding: 80px 10% 40px; 
+    border-top: 1px solid var(--border-glass); 
+    width: 100%;
 }
+.footer-container { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; max-width: 1300px; margin: 0 auto; }
+.footer-col { flex: 1; }
+.footer-col h3 { color: var(--accent-lilac); font-size: 1.1rem; font-weight: 600; margin-bottom: 25px; text-transform: uppercase; }
+.footer-col p, .footer-col a { color: var(--white-pure); font-weight: 300; font-size: 0.9rem; text-decoration: none; line-height: 2; }
+.footer-col a:hover { color: var(--accent-lilac); }
+.footer-logo { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.logo-footer { height: 60px; width: auto; margin-bottom: 15px; } /* Corregido de 300px a 60px */
+.footer-bottom { text-align: center; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; font-size: 0.75rem; opacity: 0.5; }
 
-.logo-footer{
+/* ================== 9. BOTÓN WHATSAPP ================== */
+.whatsapp-btn { position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: 0.3s; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.3)); }
+.whatsapp-icon { width: 65px; height: auto; }
 
-    height:70px;
-
-    width:auto;
-
-    margin-bottom:20px;
-
-}
-
-.footer-desc{
-
-    font-size:0.9rem;
-
-    line-height:1.6;
-
-    color:var(--white-70);
-
-}
-
-/* BARRA INFERIOR */
-
-.footer-bottom{
-
-    border-top:1px solid var(--white-10);
-
-    margin-top:60px;
-
-    padding-top:20px;
-
-    text-align:center;
-
-}
 
 .copyright-text{
 
