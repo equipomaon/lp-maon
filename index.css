@@ -449,33 +449,32 @@ body::before{
     padding:20px;
 
 }
+.card {
+    flex: 1;
+    max-width: 450px;
+    min-height: 280px;
+    padding: 50px 40px;
+    border-radius: var(--radius-lg);
 
-.card{
+    /* --- CAMBIOS PRINCIPALES --- */
+    
+    /* 1. Cambiamos el fondo a un negro/oscuro semi-transparente (ajusta el 0.6 a tu gusto) */
+    background: rgba(0, 0, 0, 0.6); 
+    
+    /* Opcionalmente puedes usar el color de tu fondo: rgba(5, 10, 20, 0.7); */
 
-    flex:1;
+    /* 2. Aumentamos un poco el desenfoque para que se vea más sólido */
+    backdrop-filter: var(--blur-medium); 
 
-    max-width:450px;
+    /* 3. Ponemos la opacidad en 1 para que el texto y los números brillen al 100% */
+    opacity: 1; 
+    
+    /* --------------------------- */
 
-    min-height:280px;
-
-    padding:50px 40px;
-
-    border-radius:var(--radius-lg);
-
-    background:var(--glass-bg);
-
-    backdrop-filter:var(--blur-soft);
-
-    border:1px solid var(--glass-border);
-
-    transform:scale(0.95);
-
-    opacity:0.9;
-
-    cursor:pointer;
-
-    transition:var(--transition-smooth);
-
+    border: 1px solid var(--glass-border);
+    transform: scale(0.95);
+    cursor: pointer;
+    transition: var(--transition-smooth);
 }
 
 .card-content{
