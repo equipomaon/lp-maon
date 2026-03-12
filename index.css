@@ -119,6 +119,10 @@
 html{
     scroll-behavior:smooth;
 }
+ 
+section[id] {
+    scroll-margin-top: 90px; /* Esto evita que el menú tape el título */
+}
 
 body{
 
@@ -862,15 +866,15 @@ footer {
 
 .footer-link-item a{ 
 
-color:white;
-text-decoration:none;
-transition:0.3s;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
 
 }
 
 .footer-link-item a:hover{
 
-color:var(--accent-lilac);
+    color:var(--accent-lilac);
 
 }
 
@@ -880,36 +884,36 @@ color:var(--accent-lilac);
 .whatsapp-icon { width: 65px; height: auto; }
 
 
-.copyright-text{
+    .copyright-text{
 
-    font-size:0.8rem;
+        font-size:0.8rem;
 
-    color:var(--white-70);
+        color:var(--white-70);
 
-}
+    }
 
 
 /* =========================================================
 12. WHATSAPP BUTTON
 ========================================================= */
 
-.whatsapp-btn{
+    .whatsapp-btn{
 
-    position:fixed;
+        position:fixed;
 
-    bottom:30px;
+        bottom:30px;
 
-    right:30px;
+        right:30px;
 
-    z-index:9999;
+        z-index:9999;
 
-}
+    }
 
-.whatsapp-icon{
+    .whatsapp-icon{
 
-    width:30px;
+        width:30px;
 
-}
+    }
 
 
 /* =========================================================
@@ -931,6 +935,11 @@ color:var(--accent-lilac);
     }
 
     
+
+     
+    section[id] {
+        scroll-margin-top: 70px; /* Ajusta según el alto de tu menú móvil */
+    }
 
     .hero-section{
 
