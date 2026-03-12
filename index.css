@@ -544,6 +544,16 @@ body::before{
 
 }
 
+.que-hacemos-tittle {
+    text-align: right !important; /* Fuerza la alineación a la derecha */
+    width: 100%;                  /* Asegura que use todo el espacio disponible */
+    display: block;               /* Lo trata como un bloque completo */
+}
+
+.como-funciona-nuestro-sistema-tittle{
+    text-align: right;
+} 
+
 .process-section{
 
     padding:100px var(--container-padding);
