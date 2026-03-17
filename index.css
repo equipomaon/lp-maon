@@ -459,7 +459,7 @@ body::before{
     /* --- CAMBIOS PRINCIPALES --- */
     
     /* 1. Cambiamos el fondo a un negro/oscuro semi-transparente (ajusta el 0.6 a tu gusto) */
-    background: rgba(0, 0, 0, 0.6); 
+    background: transparent; 
     
     /* Opcionalmente puedes usar el color de tu fondo: rgba(5, 10, 20, 0.7); */
 
@@ -713,7 +713,7 @@ margin:auto;
 }
 
 .chevron-item{
-flex:1;
+    flex:1;
 height:180px;
 background:rgba(255,255,255,0.04);
 backdrop-filter:blur(10px);
@@ -721,22 +721,25 @@ display:flex;
 align-items:center;
 justify-content:center;
 position:relative;
-transition:0.3s;
-border-left:1px solid var(--border-glass);
+transition:var(--transition-normal);
+border:1px solid var(--glass-border); /* mejor que border-left */
 }
 
 /* forma de flecha */
 
 .chevron-item{
-clip-path:polygon(
-0% 0%,
-92% 0%,
-100% 50%,
-92% 100%,
-0% 100%,
-8% 50%
-);
-margin-left:-3%;
+ flex: 1; 
+    height: 180px; 
+    background: rgba(255,255,255,0.05); 
+    backdrop-filter: blur(8px); 
+    /* Forma de flecha */
+    clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%); 
+    margin-left: -3.5%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 0.3s;
+    border-left: 1px solid var(--border-glass); 
 }
 
 /* primer bloque */
@@ -782,17 +785,21 @@ clip-path:polygon(
 }
 
 .step-desc{
-font-size:0.8rem;
-color:white;
-opacity:0.9;
+    font-size:0.8rem;
+    color:white;
+    opacity:0.9;
 }
 
 /* hover */
 
-.chevron-item:hover{
-background:rgba(178,170,238,0.12);
-transform:translateY(-4px);
-z-index:5;
+.chevron-item:hover { 
+    background: rgba(178, 170, 238, 0.15); 
+    transform: translateY(-4px); 
+    z-index: 10;
+    /* El secreto: proyectamos la sombra solo hacia los lados X. 
+       Como no hay desplazamiento en Y, la parte superior e inferior quedan limpias. */
+    filter: drop-shadow(2px 0px 0px var(--accent-lilac)) 
+            drop-shadow(-2px 0px 0px var(--accent-lilac));
 }
 
 /* =========================================================
